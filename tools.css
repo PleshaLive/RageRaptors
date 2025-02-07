@@ -1,0 +1,307 @@
+/* ============================= */
+/*    Подключаем шрифт Anybody   */
+/* ============================= */
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@200;400;600&display=swap');
+
+/* ============================= */
+/*        Сброс / базовые       */
+/* ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+   Стили html, body 
+   Аналогично events.css
+*/
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Anybody', sans-serif; 
+  color: #B0B0B0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: auto; 
+
+  /* Параллакс-фон + градиент */
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ), 
+    url("images/BG_main2.png") no-repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+}
+
+/* ============================= */
+/*     Переменные (как в events) */
+/* ============================= */
+:root {
+  --primary-color: #1a1a1a;
+  --secondary-color: #2a2a2a;
+  --accent-color: #e25818;       
+  --highlight-color: #94ff00;    
+  --light-text: #fff;
+  --muted-text: #ccc;
+  --glass-bg: rgba(26, 26, 26, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --card-hover-scale: 1.06;
+  --transition-speed: 0.3s;
+  --box-shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* ============================= */
+/*    Overlay / Видео (если надо) */
+/* ============================= */
+#transitionOverlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#transitionVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: transparent;
+}
+#iframeContainer {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ============================= */
+/*      Основной контейнер      */
+/* ============================= */
+.page-content {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  min-height: 1080px;
+  margin: 0 auto;
+  padding-bottom: 50px; 
+}
+
+/* ============================= */
+/*            Логотип           */
+/* ============================= */
+.logo {
+  position: absolute;
+  width: 420px;
+  height: 192px;
+  left: 185px;
+  top: 20px;
+  background: url("images/LOGO.png") no-repeat center;
+  background-size: contain;
+  z-index: 2;
+}
+
+/* ============================= */
+/*      Навигационные кнопки     */
+/* ============================= */
+.nav-buttons {
+  position: absolute;
+  top: 80px;
+  left: 700px;
+  width: 600px;
+  height: 250px; 
+  z-index: 2;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
+/* Кнопки */
+.product-button,
+.services-button,
+.about-button,
+.events-button {
+  position: absolute;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.2s linear;
+}
+
+/* Product */
+.product-button {
+  top: 0px;
+  left: 100px;
+  width: 168px;
+  height: 85px;
+  background: url("images/Product button.png") no-repeat center;
+  background-size: contain;
+}
+
+/* Services */
+.services-button {
+  top: 0px;
+  left: 270px;
+  width: 200px;
+  height: 85px;
+  background: url("images/Services button.png") no-repeat center;
+  background-size: contain;
+}
+
+/* About */
+.about-button {
+  top: -5px;
+  left: 500px;
+  width: 200px;
+  height: 85px;
+  background: url("images/About button.png") no-repeat center;
+  background-size: contain;
+}
+
+/* Events */
+.events-button {
+  top: 0px;
+  left: 700px;
+  width: 183px;
+  height: 77px;
+  background: url("images/Events button.png") no-repeat center;
+  background-size: contain;
+}
+
+/* Hover */
+.product-button:hover,
+.services-button:hover,
+.about-button:hover,
+.events-button:hover {
+  transform: scale(1.05);
+}
+
+/* Видео внутри */
+.product-button video,
+.services-button video,
+.about-button video,
+.events-button video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+.product-button:hover video,
+.services-button:hover video,
+.about-button:hover video,
+.events-button:hover video {
+  opacity: 1;
+}
+
+/* ============================= */
+/*            Карточки           */
+/* ============================= */
+/* Здесь сохраняем ваши блоки card#1, card#2, card#3 */
+.card {
+  position: absolute;
+  width: 400px;
+  height: 420px;
+  transition: transform 0.3s ease;
+}
+#card1 {
+  left: 251px;
+  top: 359.76px;
+}
+#card2 {
+  left: 756.83px;
+  top: 359.76px;
+}
+#card3 {
+  left: 1262.67px;
+  top: 359.76px;
+}
+.card:hover {
+  transform: scale(var(--card-hover-scale));
+}
+/* Стеклянный фон внутри карточки */
+.rect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px) saturate(150%);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px var(--box-shadow-color);
+  transition: border-color var(--transition-speed) ease,
+              box-shadow var(--transition-speed) ease;
+}
+.card:hover .rect {
+  border-color: var(--accent-color);
+  box-shadow: 0 8px 32px rgba(226, 88, 24, 0.5);
+}
+/* Текст */
+.title {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 720px; 
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  text-align: center;
+}
+.desc {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 330px;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 29px;
+  color: #D8D8D8;
+  text-align: left;
+}
+/* Кнопка Download */
+.download {
+  position: absolute;
+  top: 350px;
+  left: 82%;
+  transform: translateX(-50%);
+  transform-origin: center;
+  
+  width: 176px;
+  height: 56px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 56px;
+  text-align: left;
+  color: #9BB095;
+  cursor: pointer;
+  transition: color var(--transition-speed) ease;
+}
+.download:hover {
+  color: var(--accent-color);
+}

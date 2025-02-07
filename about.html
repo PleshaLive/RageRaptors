@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Rage Page (Reduced)</title>
+  <meta name="viewport" content="width=1920, initial-scale=1">
+
+  <!-- Подключаем стили Rage.css -->
+  <link rel="stylesheet" href="about.css">
+
+  <!-- Скрипт для плавного transition-overlay (если нужен) -->
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- Overlay для альфа-транзишна (опционально) -->
+  <div id="transitionOverlay">
+    <video
+      id="transitionVideo"
+      class="transition-video"
+      muted
+      src="assets/transition-alpha.webm"
+    ></video>
+  </div>
+
+  <!-- iframeContainer: для «подмены» страницы (опционально) -->
+  <div id="iframeContainer"></div>
+
+  <!-- Контейнер текущей страницы -->
+  <div class="page-content">
+
+    <!-- ЛОГО -->
+    <div class="logo"></div>
+
+    <!-- Навигационные кнопки -->
+    <div class="nav-buttons">
+      <!-- Кнопка Product -->
+      <a href="tools.html" class="nav-link">
+        <div class="product-button">
+          <video src="images/Product button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+
+      <!-- Кнопка Services -->
+      <a href="services.html" class="nav-link">
+        <div class="services-button">
+          <video src="images/Services button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+
+      <!-- Кнопка About -->
+      <a href="about.html" class="nav-link">
+        <div class="about-button">
+          <video src="images/About button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+
+      <!-- Новая кнопка Events -->
+      <a href="events.html" class="nav-link">
+        <div class="events-button">
+          <video src="images/Events button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+    </div><!-- /nav-buttons -->
+
+    <!-- Заголовок WHAT WE OFFER? -->
+    <div class="what-we-offer">WHAT WE OFFER?</div>
+
+    <!-- Первый большой текст (big-text-block-1) -->
+    <div class="big-text-block-1">
+      We offer professional live streaming services for streamers, online tournaments,
+      and events of any scale. With over 10 years of experience in esports and live
+      broadcast production, I handle every detail of a high-quality stream: from top-tier
+      observing, graphics, and sound to replays and visual effects. As the lead director
+      for broadcasts of major events like WePlay Dota Animajor and most WePlay tournaments
+      since 2020, I bring hands-on expertise gained throughout my career, including my
+      years at Starladder, which concluded after directing the CS Major 2019.<br><br>
+
+      This experience spans all aspects of production, from studio setup and directing
+      to commentary and design, enabling me to deliver polished, audience-focused
+      broadcasts.<br><br>
+      
+      Whether for a high-stakes tournament, a collaborative fan stream,
+      or any live event, I have the expertise and advanced gear to deliver advanced
+      live broadcasts, including replays and all key features for an engaging experience.
+      Whether it’s a tournament or a fan stream I can bring your vision to life
+      with professionalism.
+    </div>
+
+    <!-- Всё, что идёт ПОСЛЕ первого текста -->
+    <div class="after-text-content">
+
+      <!-- Группы (если нужны для позиционирования) -->
+      <div class="group-9"></div>
+      <div class="group-8"></div>
+      <div class="group-7"></div>
+      <div class="group-6"></div>
+
+      <!-- Статистические блоки (frame-1171278329 и т.д.) -->
+      <div class="frame-1171278329">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">LAN EVENTS</div>
+      </div>
+      <div class="frame-1171278330">
+        <div class="stat-number">300+</div>
+        <div class="stat-label">ONLINE EVENTS</div>
+      </div>
+      <div class="frame-1171278331">
+        <div class="stat-number">17 000+</div>
+        <div class="stat-label">LIVE HOURS</div>
+      </div>
+      <div class="frame-1171278332">
+        <div class="stat-number">10</div>
+        <div class="stat-label">YEARS EXPERIENCE</div>
+      </div>
+
+      <!-- Второй большой текст -->
+      <div class="big-text-block-2">
+        I have been officially working in the eSports industry since 2014, starting out
+        as a commentator for Point Blank and Counter-Strike. Over time, I expanded my skill
+        set to cover the full spectrum of eSports broadcasting. During my ten years of
+        experience, I’ve organized and produced numerous online and LAN tournaments, serving
+        in a variety of roles—observer, sound engineer, director, operator, and producer.
+        You could say I’ve worn nearly every hat in this field.<br><br>
+
+        In my work, I’ve introduced several innovative features to eSports broadcasting and
+        am now eager to share my own software solutions. Previously, I implemented custom
+        texture changes in CS:GO; if you heard about the team gloves at the MLG Major, that
+        was my project. I also integrated 3D models into the game using SFM and Unity,
+        collaborating with the WePlay team to bring these ideas to life.<br><br>
+
+        Unfortunately or fortunately, after the full-scale war began in Ukraine, the company
+        I worked for had to disband its broadcast team. Motivated by my ambition and
+        experience, I decided to build my own team and create my own tournaments, continuing
+        to push the boundaries of eSports broadcasting.
+      </div>
+
+      <!-- Блок Founder -->
+      <div class="founder">FOUNDER</div>
+      <div class="founder-name">Oleksandr Pleshakov</div>
+
+      <!-- Основное фото -->
+      <div class="photo-main"></div>
+
+      <!-- Фото-галерея -->
+      <div class="photo-1"></div>
+      <div class="photo-2"></div>
+      <div class="photo-3"></div>
+      <div class="photo-4"></div>
+
+      <!-- Заголовок EVENTS I PARTICIPATED IN : + нижняя полоса -->
+      <div class="events-i-participated">EVENTS I PARTICIPATED IN :</div>
+      <div class="photo-t"></div>
+
+    </div> <!-- /.after-text-content -->
+
+  </div><!-- .page-content -->
+</body>
+</html>

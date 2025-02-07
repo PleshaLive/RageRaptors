@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Tournaments Page</title>
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <link rel="stylesheet" href="events.css">
+
+  <style>
+    /* Дополнительные стили чисто для формы */
+    .add-tournament-form {
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px) saturate(150%);
+      border: 1px solid var(--glass-border);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 8px 16px var(--box-shadow-color);
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      align-items: flex-end;
+    }
+    .add-tournament-form label {
+      display: block; 
+      margin-bottom: 5px; 
+      color: var(--light-text); 
+      font-size: 16px;
+    }
+    .add-tournament-form input {
+      width: 200px; 
+      padding: 8px;
+      background: #111; 
+      border: 1px solid #333;
+      color: #fff; 
+      margin-bottom: 10px;
+    }
+    .add-tournament-form button {
+      padding: 10px 20px;
+      background: var(--accent-color); 
+      border: none; 
+      cursor: pointer; 
+      font-size: 16px; 
+      color: #fff;
+      transition: background 0.2s;
+      margin-bottom: 10px;
+    }
+    .add-tournament-form button:hover {
+      background: #ff7634;
+    }
+
+    /* Кнопки Edit/Delete */
+    .edit-delete-panel {
+      display: flex;
+      gap: 10px;
+      margin-top: 3px;
+    }
+    .edit-delete-panel button {
+      padding: 4px 10px;
+      background: #444; 
+      border: 1px solid #666;
+      color: #fff; 
+      cursor: pointer; 
+      font-size: 14px;
+      text-transform: uppercase;
+      transition: background 0.2s;
+    }
+    .edit-delete-panel button:hover {
+      background: #666;
+    }
+
+    /* Поднимаем блок с турнирами чуть ниже */
+    .tournaments-container {
+      top: 320px;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.querySelector('.add-tournament-form');
+      const container = document.querySelector('.tournaments-container');
+
+      // 1) При загрузке получаем данные с сервера
+      loadTournaments(container);
+
+      // 2) Форма "submit" - добавляем турнир (POST)
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const dateVal  = form.querySelector('input[name="date"]').value.trim() || '10/10/2017';
+        const gameVal  = form.querySelector('input[name="game"]').value.trim() || 'CS:GO';
+        const champVal = form.querySelector('input[name="championship"]').value.trim() || 'Major Championship';
+        const linkVal  = form.querySelector('input[name="link"]').value.trim() || '#';
+
+        // Отправляем POST-запрос
+        fetch('http://localhost:3000/api/tournaments', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            date: dateVal,
+            game: gameVal,
+            championship: champVal,
+            link: linkVal
+          })
+        })
+        .then(res => res.json())
+        .then(newT => {
+          console.log('Добавлен турнир:', newT);
+          form.reset();
+          // Перезагружаем список
+          loadTournaments(container);
+        })
+        .catch(err => console.error(err));
+      });
+
+      // 3) Делегируем клики Edit/Delete
+      container.addEventListener('click', (e) => {
+        const btn = e.target;
+        if (!btn.matches('button')) return;
+
+        const block = btn.closest('.tournament-block');
+        if (!block) return;
+        const tId = block.dataset.id;
+
+        if (btn.classList.contains('btn-edit')) {
+          onEdit(tId, container);
+        }
+        else if (btn.classList.contains('btn-delete')) {
+          onDelete(tId, container);
+        }
+      });
+    });
+
+    // Функция загрузки (GET) и рендера
+    function loadTournaments(container) {
+      fetch('http://localhost:3000/api/tournaments')
+        .then(res => res.json())
+        .then(data => {
+          renderTournaments(container, data);
+        })
+        .catch(err => {
+          console.error(err);
+          container.innerHTML = '<p style="color:red;">ROAAAAR!! (Ooops)</p>';
+        });
+    }
+
+    // Редактирование (PUT)
+    function onEdit(tId, container) {
+      // Сначала получаем текущие данные об этом турнире (из общего списка)
+      // Проще всего — повторно грузим список, находим нужный.
+      fetch('http://localhost:3000/api/tournaments')
+        .then(res => res.json())
+        .then(tournaments => {
+          const t = tournaments.find(x => x.id === tId);
+          if (!t) return alert('Tournament not found!');
+
+          const nd = prompt('Дата:', t.date);
+          const ng = prompt('Игра:', t.game);
+          const nc = prompt('Чемпионат:', t.championship);
+          const nl = prompt('Ссылка:', t.link);
+
+          // Готовим объект для PUT
+          const updatedData = {
+            date: nd !== null ? nd : t.date,
+            game: ng !== null ? ng : t.game,
+            championship: nc !== null ? nc : t.championship,
+            link: nl !== null ? nl : t.link
+          };
+
+          return fetch(`http://localhost:3000/api/tournaments/${tId}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(updatedData)
+          });
+        })
+        .then(res => {
+          if (!res) return; // если выше ошибка
+          return res.json();
+        })
+        .then(updated => {
+          if (!updated) return;
+          console.log('Обновлён турнир:', updated);
+          // Перечитываем список
+          loadTournaments(container);
+        })
+        .catch(err => console.error(err));
+    }
+
+    // Удаление (DELETE)
+    function onDelete(tId, container) {
+      if (!confirm('Точно удалить турнир?')) return;
+
+      fetch(`http://localhost:3000/api/tournaments/${tId}`, {
+        method: 'DELETE'
+      })
+      .then(res => res.json())
+      .then(deleted => {
+        console.log('Удалён турнир:', deleted);
+        // Перезагружаем список
+        loadTournaments(container);
+      })
+      .catch(err => console.error(err));
+    }
+
+    // Рендер списка турниров
+    function renderTournaments(container, arr) {
+      container.innerHTML = '';
+      arr.forEach(t => {
+        const block = createTournamentBlock(t);
+        container.appendChild(block);
+      });
+    }
+
+    // Создание одного блока
+    function createTournamentBlock(t) {
+      const block = document.createElement('div');
+      block.className = 'tournament-block';
+      block.dataset.id = t.id;
+
+      block.innerHTML = `
+        <div class="date1">${t.date}</div>
+        <div class="cs-go">${t.game}</div>
+        <div class="championship">${t.championship}</div>
+        <div class="tournament-link">
+          <a href="${t.link}" target="_blank" style="color:inherit; text-decoration:none;">LINK</a>
+        </div>
+        <div class="edit-delete-panel">
+          <button class="btn-edit">Edit</button>
+          <button class="btn-delete">Delete</button>
+        </div>
+      `;
+      return block;
+    }
+  </script>
+</head>
+<body>
+  <div class="page-content">
+    <!-- Логотип -->
+    <div class="logo1"></div>
+
+    <!-- Навигация -->
+    <div class="nav-buttons">
+      <a href="tools.html" class="nav-link">
+        <div class="product-button">
+          <video src="images/Product button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+      <a href="services.html" class="nav-link">
+        <div class="services-button">
+          <video src="images/Services button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+      <a href="about.html" class="nav-link">
+        <div class="about-button">
+          <video src="images/About button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+      <a href="events.html" class="nav-link">
+        <div class="events-button">
+          <video src="images/Events button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+    </div>
+
+    <!-- Форма для добавления -->
+    <form class="add-tournament-form">
+      <div>
+        <label>Дата</label>
+        <input type="text" name="date" placeholder="10/10/2017" />
+      </div>
+      <div>
+        <label>Игра</label>
+        <input type="text" name="game" placeholder="CS:GO" />
+      </div>
+      <div>
+        <label>Чемпионат</label>
+        <input type="text" name="championship" placeholder="Major..." />
+      </div>
+      <div>
+        <label>Ссылка</label>
+        <input type="text" name="link" placeholder="https://example.com" />
+      </div>
+      <button type="submit">Add Tournament</button>
+    </form>
+
+    <!-- Контейнер для списка -->
+    <div class="tournaments-container"></div>
+
+  </div>
+</body>
+</html>

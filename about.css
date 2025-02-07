@@ -1,0 +1,526 @@
+/* ========================================= */
+/*  Подключаем шрифты: Anybody (заголовки) и Roboto (текст) */
+/* ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@200;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Сброс и общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Anybody', sans-serif; /* По умолчанию остаётся Anybody */
+  color: #B0B0B0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  /* Параллакс-фон (BG_main2.png) */
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("images/BG_main2.png") no-repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+}
+
+/* ========================================= */
+/*  Переменные                              */
+/* ========================================= */
+:root {
+  --primary-color: #1a1a1a;
+  --secondary-color: #2a2a2a;
+  --accent-color: #e25818;
+  --highlight-color: #94ff00;
+  --light-text: #fff;
+  --muted-text: #ccc;
+
+  --glass-bg: rgba(26, 26, 26, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --card-hover-scale: 1.06;
+  --transition-speed: 0.3s;
+  --box-shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================= */
+/*  Overlay / Видео (transition)            */
+/* ========================================= */
+#transitionOverlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* клики проходят насквозь */
+}
+
+#transitionVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: transparent;
+}
+
+/* iframe Container (для подмены страницы) */
+#iframeContainer {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ========================================= */
+/*  ЛОГО: Увеличенные размеры на 30%        */
+/* ========================================= */
+.logo {
+  position: absolute;
+  /* Исходные размеры были 420x192, умножили на 1.3 (пример) */
+  width: 506px;
+  height: 210px;
+  left: 100px;
+  top: 0px;
+  background: url("images/LOGO.png") no-repeat center;
+  background-size: contain;
+}
+
+/* ========================================= */
+/*  Навигационные кнопки                     */
+/* ========================================= */
+.nav-buttons {
+  /* Вместо display:flex — абсолютное позиционирование на странице */
+  position: absolute;
+  top: 100px;
+  left: 800px;
+  /* Добавляем «контейнер»: можно варьировать ширину/высоту */
+  width: 700px;
+  height: 250px;
+  /* Для наглядности можно включить рамку:
+     outline: 1px solid red; */
+}
+
+/* Стили для ссылок (если у вас кнопки обёрнуты в <a> ...) */
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+}
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
+/* ---------- Кнопки ---------- */
+/* Убираем общий flex; теперь каждая кнопка имеет свои координаты */
+.product-button,
+.services-button,
+.about-button,
+.events-button {
+  position: absolute;  /* Позволяет двигать top/left */
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.2s linear;
+}
+
+/* Пример позиционирования для каждой кнопки: */
+
+/* Product (168×85) */
+.product-button {
+  top: 0px;    /* задайте нужные координаты */
+  left: 100px;
+  width: 168px;
+  height: 85px;
+  background: url("images/Product button.png") no-repeat center;
+  background-size: contain;
+}
+
+/* Services (200×85) */
+.services-button {
+  top: 0px;
+  left: 270px; /* чтобы не налезало на .product-button */
+  width: 200px;
+  height: 85px;
+  background: url("images/Services button.png") no-repeat center;
+  background-size: contain;
+}
+
+/* About (200×85) */
+.about-button {
+  top: -5px; /* опустили вниз */
+  left: 500px;
+  width: 200px;
+  height: 85px;
+  background: url("images/About button.png") no-repeat center;
+  background-size: contain;
+}
+
+/* Events (183×77) */
+.events-button {
+  top: 0px; /* чуть ниже */
+  left: 700px; 
+  width: 183px;
+  height: 77px;
+  background: url("images/Events button.png") no-repeat center;
+  background-size: contain;
+}
+
+/* Анимация при наведении (увеличение) */
+.product-button:hover,
+.services-button:hover,
+.about-button:hover,
+.events-button:hover {
+  transform: scale(1.05);
+}
+
+/* Видео внутри кнопок: тоже содержится целиком */
+.product-button video,
+.services-button video,
+.about-button video,
+.events-button video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+/* При hover видео проявляется */
+.product-button:hover video,
+.services-button:hover video,
+.about-button:hover video,
+.events-button:hover video {
+  opacity: 1;
+}
+
+/* ========================================= */
+/*  Основной контейнер .page-content        */
+/* ========================================= */
+.page-content {
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 50px;
+
+  /* Уменьшаем контент до 70% (из исходного кода) */
+  transform: scale(0.8);
+  transform-origin: top center;
+}
+
+.after-text-content {
+  position: relative;
+  top: -80px; /* Сдвигаем всё содержимое наверх */
+}
+
+/* ========================================= */
+/*  Заголовок "WHAT WE OFFER?"              */
+/* ========================================= */
+.what-we-offer {
+  position: absolute;
+  width: 323.61px;
+  height: 88.66px;
+  left: 203px;
+  top: 250px;
+  font-family: 'Anybody ExtraExpanded', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 44px;
+  display: flex;
+  align-items: center;
+  color: #DC5C33;
+}
+
+/* ========================================= */
+/*  Первый большой текст (big-text-block-1) */
+/*      --> Roboto для удобочитаемости      */
+/* ========================================= */
+.big-text-block-1 {
+  position: absolute;
+  width: 1459px;
+  height: 474px;
+  left: calc(50% - 1459.37px/2 - 16.28px);
+  top: 310px;
+  font-family: 'Roboto', sans-serif; /* Основной текст --> Roboto */
+  font-style: normal;
+  font-weight: 400; /* 400 - стандартная толщина для абзацев */
+  font-size: 30px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  color: #E7E4D4;
+}
+
+/* Группы (позиционирование, если нужно) */
+.group-9 {
+  position: absolute;
+  width: 1459.37px;
+  height: 833.42px;
+  left: 209.6px;
+  top: 937.08px;
+}
+.group-8 {
+  position: absolute;
+  width: 1452.89px;
+  height: 578.96px;
+  left: 209.87px;
+  top: 937.08px;
+}
+.group-7 {
+  position: absolute;
+  width: 743.87px;
+  height: 575.97px;
+  left: 918.89px;
+  top: 937.08px;
+}
+.group-6 {
+  position: absolute;
+  width: 743.87px;
+  height: 85.24px;
+  left: 918.89px;
+  top: 1427.81px;
+}
+
+/* ========================================= */
+/*  Фреймы со статистикой                   */
+/* ========================================= */
+.frame-1171278329,
+.frame-1171278330,
+.frame-1171278331,
+.frame-1171278332 {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 14.3569px;
+  box-sizing: border-box;
+  height: 76px; 
+  min-height: 56px;
+
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px) saturate(150%);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px var(--box-shadow-color);
+
+  transform-origin: center center;
+  transition:
+    transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease,
+    border-color var(--transition-speed) ease;
+}
+
+.frame-1171278329:hover,
+.frame-1171278330:hover,
+.frame-1171278331:hover,
+.frame-1171278332:hover {
+  transform: scale(var(--card-hover-scale));
+  border-color: var(--accent-color);
+  box-shadow: 0 8px 32px rgba(226, 88, 24, 0.5);
+}
+
+/* Позиции .frame-* (пример) */
+.frame-1171278329 {
+  width: 149.85px;
+  left: calc(50% - 149.85px/2 + 433.12px);
+  top: calc(50% - 0.24px/2 + (300.93px + 1100px));
+}
+.frame-1171278330 {
+  width: 176.77px;
+  left: calc(50% - 176.77px/2 + 614.38px);
+  top: calc(50% - 0.24px/2 + (300.93px + 1100px));
+}
+.frame-1171278331 {
+  width: 163.31px;
+  left: calc(50% - 163.31px/2 + 258.59px);
+  top: calc(50% - 0.24px/2 + (300.93px + 1100px));
+}
+.frame-1171278332 {
+  width: 200.1px;
+  left: calc(50% - 200.1px/2 + 58.94px);
+  top: calc(50% - 0.24px/2 + (300.93px + 1100px));
+}
+
+/* Текст внутри фреймов */
+.frame-1171278329 .stat-number,
+.frame-1171278330 .stat-number,
+.frame-1171278331 .stat-number,
+.frame-1171278332 .stat-number {
+  font-family: 'Anybody SemiCondensed', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36.8624px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #DC5C33;
+  margin-right: 8px;
+}
+.frame-1171278329 .stat-label,
+.frame-1171278330 .stat-label,
+.frame-1171278331 .stat-label,
+.frame-1171278332 .stat-label {
+  font-family: 'Anybody SemiCondensed', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18.4312px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #E7E4D4;
+}
+
+/* ========================================= */
+/*  Второй большой текст (big-text-block-2) */
+/*      --> Roboto тоже                     */
+/* ========================================= */
+.big-text-block-2 {
+  position: absolute;
+  width: 730px;
+  height: 370px;
+  left: calc(50% - 713.72px/2 + 317.53px);
+  top: 1010px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  color: #E7E4D4;
+}
+
+/* ========================================= */
+/*  Блок Founder                            */
+/* ========================================= */
+.founder {
+  position: absolute;
+  width: 323.61px;
+  height: 31.74px;
+  left: 910px;
+  top: 900px;
+  font-family: 'Anybody ExtraExpanded', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 44px;
+  display: flex;
+  align-items: center;
+  color: #DC5C33;
+}
+
+.founder-name {
+  position: absolute;
+  width: 551.47px;
+  height: 54.08px;
+  left: 911px;
+  top: 942px;
+  font-family: 'Anybody SemiCondensed', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 55px;
+  display: flex;
+  align-items: center;
+  color: #E7E4D4;
+}
+
+/* ========================================= */
+/*  Главное фото + Галерея                  */
+/* ========================================= */
+.photo-main {
+  position: absolute;
+  width: 641.37px;
+  height: 578.96px;
+  left: 209.87px;
+  top: 900px;
+  background: url("images/photo main.png") no-repeat center;
+  background-size: cover;
+  border-radius: 10.6394px;
+}
+
+.photo-1 {
+  position: absolute;
+  width: 296.13px;
+  height: 219.88px;
+  left: 209.6px;
+  top: 1513px;
+  background: url("images/photo 1.png") no-repeat center;
+  background-size: cover;
+  border-radius: 10.6394px;
+}
+.photo-2 {
+  position: absolute;
+  width: 420.22px;
+  height: 216.33px;
+  left: 530.55px;
+  top: 1513px;
+  background: url("images/photo 2.png") no-repeat center;
+  background-size: cover;
+  border-radius: 10.6394px;
+}
+.photo-3 {
+  position: absolute;
+  width: 251.8px;
+  height: 216.33px;
+  left: 975.63px;
+  top: 1513px;
+  background: url("images/photo 3.png") no-repeat center;
+  background-size: cover;
+  border-radius: 10.6394px;
+}
+.photo-4 {
+  position: absolute;
+  width: 416.71px;
+  height: 216.33px;
+  left: 1252.26px;
+  top: 1513px;
+  background: url("images/photo 4.png") no-repeat center;
+  background-size: cover;
+  border-radius: 10.6394px;
+}
+
+/* ========================================= */
+/*  Заголовок EVENTS I PARTICIPATED + полоса */
+/* ========================================= */
+.events-i-participated {
+  position: absolute;
+  width: 1000px;
+  height: 31.92px;
+  left: calc(50% - 900px/2 - 2.54px);
+  top: 1826.36px;
+  font-family: 'Anybody ExtraExpanded', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 42.5575px;
+  line-height: 44px;
+  display: flex;
+  align-items: center;
+  color: #DC5C33;
+}
+
+.photo-t {
+  position: absolute;
+  width: 1459.37px;
+  height: 135.65px;
+  left: 209.6px;
+  top: 1873.35px;
+  background: url("images/photo t.png") no-repeat center;
+  background-size: cover;
+}

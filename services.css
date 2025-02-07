@@ -1,0 +1,499 @@
+/* ============================= */
+/*    Подключаем шрифт Anybody   */
+/* ============================= */
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@200;400;600&display=swap');
+
+/* ============================= */
+/*        Сброс / базовые       */
+/* ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+   Стили html, body 
+   Берём из events.css, чтобы повторить параллакс-фон и шрифт.
+*/
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Anybody', sans-serif; 
+  color: #B0B0B0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: auto; 
+
+  /* Фон, как в events.css: BG_main2 + градиент */
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ), 
+    url("images/BG_main2.png") no-repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+}
+
+/* ============================= */
+/*     Переменные (из events)    */
+/* ============================= */
+:root {
+  --primary-color: #1a1a1a;
+  --secondary-color: #2a2a2a;
+  --accent-color: #e25818;       /* Яркие акценты (кнопки, ховер) */
+  --highlight-color: #94ff00;    /* Неоновый оттенок */
+  --light-text: #fff;
+  --muted-text: #ccc;
+
+  --glass-bg: rgba(26, 26, 26, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --card-hover-scale: 1.06;
+  --transition-speed: 0.3s;
+  --box-shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* ============================= */
+/*    Overlay / Видео (если нужно) */
+/* ============================= */
+#transitionOverlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#transitionVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: transparent;
+}
+#iframeContainer {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ============================= */
+/*      Основной контейнер      */
+/* ============================= */
+.page-content {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  min-height: 1080px;
+  margin: 0 auto;
+  padding-bottom: 50px; 
+}
+
+/* ============================= */
+/*            Логотип           */
+/* ============================= */
+/* По аналогии с .logo1 из events */
+.logo {
+  position: absolute;
+  width: 420px;
+  height: 192px;
+  left: 185px;
+  top: -280px;
+  background: url("images/LOGO.png") no-repeat center;
+  background-size: contain;
+  z-index: 2;
+}
+
+/* ============================= */
+/*      Навигационные кнопки     */
+/* ============================= */
+.nav-buttons {
+  /* Те же параметры, что и в events.css */
+  position: absolute;
+  top: -220px;
+  left: 700px;
+  width: 600px;
+  height: 250px; 
+  z-index: 2;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
+/* Кнопки .product-button, .services-button, .about-button, .events-button */
+.product-button,
+.services-button,
+.about-button,
+.events-button {
+  position: absolute;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.2s linear;
+}
+
+/* Product */
+.product-button {
+  top: 0px;
+  left: 100px;
+  width: 168px;
+  height: 85px;
+  background: url("images/Product button.png") no-repeat center;
+  background-size: contain;
+}
+
+/* Services */
+.services-button {
+  top: 0px;
+  left: 270px;
+  width: 200px;
+  height: 85px;
+  background: url("images/Services button.png") no-repeat center;
+  background-size: contain;
+}
+
+/* About */
+.about-button {
+  top: -5px;
+  left: 500px;
+  width: 200px;
+  height: 85px;
+  background: url("images/About button.png") no-repeat center;
+  background-size: contain;
+}
+
+/* Events */
+.events-button {
+  top: 0px;
+  left: 700px;
+  width: 183px;
+  height: 77px;
+  background: url("images/Events button.png") no-repeat center;
+  background-size: contain;
+}
+
+/* Ховер */
+.product-button:hover,
+.services-button:hover,
+.about-button:hover,
+.events-button:hover {
+  transform: scale(1.05);
+}
+
+/* Видео внутри кнопок */
+.product-button video,
+.services-button video,
+.about-button video,
+.events-button video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+.product-button:hover video,
+.services-button:hover video,
+.about-button:hover video,
+.events-button:hover video {
+  opacity: 1;
+}
+
+/* ======================================= */
+/*     Секция Pricing Plans и т.д.         */
+/*   (Старые стили services.css)           */
+/* ======================================= */
+.pricing-section {
+  margin-top: 300px; 
+  padding: 0 200px;
+  background: transparent;
+  color: var(--muted-text);
+}
+
+.pricing-header {
+  margin-bottom: -10px;
+}
+.pricing-header h1 {
+  font-size: 48px;
+  color: var(--light-text);
+  margin-bottom: 20px;
+  margin-left: 60px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+/* ... и т.д., все остальные блоки (pricing-card, compare-table и т.п.) */
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Карточка */
+.pricing-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px) saturate(150%);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  height: auto;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 8px 16px var(--box-shadow-color);
+  transition: transform var(--transition-speed) ease,
+              box-shadow var(--transition-speed) ease,
+              border-color var(--transition-speed) ease;
+  flex: 0 0 auto; 
+}
+.pricing-card:hover {
+  transform: scale(var(--card-hover-scale));
+  border-color: var(--accent-color);
+  box-shadow: 0 8px 32px rgba(226, 88, 24, 0.5);
+}
+.pricing-card.free {
+  width: 327px;
+  height: 500px;
+}
+.pricing-card.personal {
+  width: 327px;
+  height: 587px;
+}
+.pricing-card.professional {
+  width: 327px;
+  height: 627px;
+}
+.pricing-card.enterprise {
+  width: 327px;
+  height: 854px;
+}
+.pricing-card h2 {
+  font-size: 18px;
+  color: var(--light-text);
+  margin: 15px 0;
+}
+.pricing-card .price {
+  font-size: 28px;
+  color: var(--accent-color);
+  margin: 10px 0;
+}
+.pricing-card .per-day {
+  font-size: 16px;
+  color: var(--muted-text);
+}
+.pricing-card .plan-desc {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: var(--muted-text);
+}
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  font-size: 14px;
+  color: var(--muted-text);
+  text-align: left;
+}
+.pricing-card ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+.pricing-card ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+.pricing-card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--accent-color);
+  color: var(--light-text);
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background var(--transition-speed) ease, 
+              transform var(--transition-speed) ease;
+}
+.pricing-card .btn:hover {
+  background: #c14e14;
+  transform: scale(1.05);
+}
+
+/* Картинки */
+.plan-image {
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+.plan-image.free-img {
+  background-image: url('images/pricing-free.png');
+}
+.plan-image.personal-img {
+  background-image: url('images/pricing-personal.png');
+}
+.plan-image.professional-img {
+  background-image: url('images/pricing-professional.png');
+}
+.plan-image.enterprise-img {
+  background-image: url('images/pricing-enterprise.png');
+}
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: var(--accent-color);
+  color: var(--light-text);
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(226, 88, 24, 0.7);
+}
+
+/* Compare Plans таблица */
+.compare-plans-section {
+  padding: 60px 250px;
+  background: transparent;
+  color: var(--muted-text);
+}
+.compare-plans-section h2 {
+  font-size: 50px;
+  color: var(--light-text);
+  margin-bottom: 10px;
+  text-align: left;
+}
+.compare-table-container {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px) saturate(150%);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px var(--box-shadow-color);
+  transition: transform var(--transition-speed) ease, 
+              box-shadow var(--transition-speed) ease, 
+              border-color var(--transition-speed) ease;
+  margin-top: 30px;
+  padding: 20px;
+}
+.compare-table-container:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 8px 32px rgba(226, 88, 24, 0.5);
+}
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.compare-table thead th {
+  background: transparent;
+  color: var(--light-text);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.compare-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.compare-table tbody tr:last-child {
+  border-bottom: none;
+}
+.compare-table tbody td {
+  background: transparent;
+  color: var(--muted-text);
+  text-align: center;
+  padding: 8px 10px;
+  border: none;
+  font-size: 15px;
+  transition: background var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+.compare-table tbody td:first-child {
+  text-align: left;
+  font-weight: 500;
+  color: var(--light-text);
+}
+.compare-table tbody tr:hover td {
+  background: rgba(73, 62, 54, 0.144);
+}
+.plus {
+  color: var(--accent-color) !important; 
+  font-weight: 900;
+  font-size: 2rem !important;
+}
+.minus {
+  color: #757575 !important;
+  font-weight: 700;
+  font-size: 2rem !important;
+}
+.compare-table tbody tr:last-child td {
+  color: var(--highlight-color);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.compare-table tbody tr:last-child td:first-child {
+  color: var(--light-text);
+  text-transform: uppercase;
+}
+
+/* Описания */
+.descriptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px; 
+  padding: 0 250px; 
+}
+.description {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px) saturate(150%);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1 1 calc(33% - 10px);
+  box-shadow: 0 8px 16px var(--box-shadow-color);
+  transition: transform var(--transition-speed) ease, 
+              box-shadow var(--transition-speed) ease, 
+              border-color var(--transition-speed) ease;
+}
+.description h3 {
+  margin-bottom: 0px;
+  font-size: 1.3rem;
+  color: var(--light-text);
+}
+.description p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--muted-text);
+}
+.description:hover {
+  transform: scale(var(--card-hover-scale));
+  border-color: var(--accent-color);
+  box-shadow: 0 8px 32px rgba(226, 88, 24, 0.5);
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Events Page</title>
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <link rel="stylesheet" href="events.css">
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.querySelector('.tournaments-container');
+      // Загружаем список с сервера
+      fetch('http://localhost:3000/api/tournaments')
+        .then(res => res.json())
+        .then(tournaments => {
+          renderTournaments(container, tournaments);
+        })
+        .catch(err => {
+          console.error(err);
+          container.innerHTML = '<p style="color:red;">Something must have gone wrong, try again later!</p>';
+        });
+    });
+
+    function createTournamentBlock(t) {
+      const block = document.createElement('div');
+      block.className = 'tournament-block';
+      block.innerHTML = `
+        <div class="date1">${t.date}</div>
+        <div class="cs-go">${t.game}</div>
+        <div class="championship">${t.championship}</div>
+        <div class="tournament-link">
+          <a href="${t.link}" target="_blank" style="color:inherit; text-decoration:none;">LINK</a>
+        </div>
+      `;
+      return block;
+    }
+
+    function renderTournaments(container, arr) {
+      container.innerHTML = '';
+      arr.forEach(t => {
+        const block = createTournamentBlock(t);
+        container.appendChild(block);
+      });
+    }
+  </script>
+</head>
+<body>
+
+  <div class="page-content">
+    <!-- Логотип -->
+    <div class="logo1"></div>
+
+    <!-- Навигация -->
+    <div class="nav-buttons">
+      <a href="tools.html" class="nav-link">
+        <div class="product-button">
+          <video src="images/Product button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+      <a href="services.html" class="nav-link">
+        <div class="services-button">
+          <video src="images/Services button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+      <a href="about.html" class="nav-link">
+        <div class="about-button">
+          <video src="images/About button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+      <a href="events.html" class="nav-link">
+        <div class="events-button">
+          <video src="images/Events button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+    </div>
+
+    <!-- Подзаголовок -->
+    <div class="events-heading">
+      List of events we have participated in.<br>
+      Since 2025, we have been collaborating under the name Rage Raptor.
+    </div>
+
+    <!-- Контейнер для турнирных блоков -->
+    <div class="tournaments-container"></div>
+  </div>
+
+</body>
+</html>

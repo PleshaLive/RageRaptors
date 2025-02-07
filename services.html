@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Services Page</title>
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <!-- Подключаем стили -->
+  <link rel="stylesheet" href="services.css">
+  <!-- Скрипт переходов, если нужно -->
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- Альфа-транзишн (опционально) -->
+  <div id="transitionOverlay">
+    <video
+      id="transitionVideo"
+      class="transition-video"
+      muted
+      src="assets/transition-alpha.webm"
+    ></video>
+  </div>
+
+  <!-- iframeContainer (если нужно) -->
+  <div id="iframeContainer"></div>
+
+  <!-- Основной контейнер страницы -->
+  <div class="page-content">
+
+    <!-- Логотип -->
+    <div class="logo"></div>
+
+    <!-- Блок навигации из 4 кнопок -->
+    <div class="nav-buttons">
+      <a href="tools.html" class="nav-link">
+        <div class="product-button">
+          <video src="images/Product button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+      <a href="services.html" class="nav-link">
+        <div class="services-button">
+          <video src="images/Services button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+      <a href="about.html" class="nav-link">
+        <div class="about-button">
+          <video src="images/About button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+      <a href="events.html" class="nav-link">
+        <div class="events-button">
+          <video src="images/Events button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+    </div>
+
+    <!-- Секция Pricing Plans (ваш контент) -->
+    <section class="pricing-section">
+      <div class="pricing-header">
+        <h1>PRICING PLANS</h1>
+      </div>
+
+      <div class="pricing-container">
+        <!-- Free -->
+        <div class="pricing-card free">
+          <div class="plan-image free-img"></div>
+          <h2>CHILL</h2>
+          <p class="price">€0.00</p>
+          <p class="plan-desc">
+            A simple yet complete kit for hassle-free streaming with your provided graphics.
+          </p>
+          <ul class="plan-features">
+            <li>Setup</li>
+            <li>Live Broadcasting</li>
+          </ul>
+          <a href="#" class="btn">Get Started</a>
+        </div>
+
+        <!-- Personal -->
+        <div class="pricing-card personal">
+          <div class="plan-image personal-img"></div>
+          <h2>BASIC</h2>
+          <p class="price">€34.99<span class="per-day">/ day</span></p>
+          <p class="plan-desc">
+            Obtain a solid base for top-tier live coverage and smoother streaming standards.
+          </p>
+          <ul class="plan-features">
+            <li>Setup</li>
+            <li>Live Broadcasting</li>
+            <li>Observing setup + observer</li>
+            <li>Instant Replays</li>
+          </ul>
+          <a href="#" class="btn">Get Started</a>
+        </div>
+
+        <!-- Professional -->
+        <div class="pricing-card professional">
+          <div class="plan-image professional-img"></div>
+          <h2>PRO</h2>
+          <span class="badge">Most Popular</span>
+          <p class="price">€149.99<span class="per-day">/ day</span></p>
+          <p class="plan-desc">
+            Gain nearly all you need to present top-notch skill and polish on your broadcast.
+          </p>
+          <ul class="plan-features">
+            <li>Setup</li>
+            <li>Live Broadcasting</li>
+            <li>Observing setup + observer</li>
+            <li>Instant Replays</li>
+            <li>Server admin</li>
+            <li>Overlays</li>
+          </ul>
+          <a href="#" class="btn">Get Started</a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="pricing-card enterprise">
+          <div class="plan-image enterprise-img"></div>
+          <h2>RAGE</h2>
+          <p class="price">€570<span class="per-day">/ day</span></p>
+          <p class="plan-desc">
+            You won't uncover a superior alternative for a refined, high-impact broadcast.
+          </p>
+          <ul class="plan-features">
+            <li>Setup</li>
+            <li>Live Broadcasting</li>
+            <li>Observing setup + observer</li>
+            <li>Instant Replays</li>
+            <li>Server admin</li>
+            <li>Overlays</li>
+            <li>SMM+</li>
+            <li>Talent search</li>
+            <li>Design kit</li>
+            <li>Overlays</li>
+            <li>Tournament documentation</li>
+            <li>video development</li>
+            <li>Tournament documentation</li>
+          </ul>
+          <a href="#" class="btn">Get Started</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция Compare Plans (таблица) -->
+    <section class="compare-plans-section">
+      <h2>COMPARE PLANS</h2>
+      <div class="compare-table-container">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>CHILL</th>
+              <th>BASIC</th>
+              <th>PRO</th>
+              <th>RAGE</th>
+              <th>1 Day Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Live Broadcasting</td>
+              <td class="plus">+</td>
+              <td class="plus">+</td>
+              <td class="plus">+</td>
+              <td class="plus">+</td>
+              <td>250$</td>
+            </tr>
+            <tr>
+              <td>In-Game Observer</td>
+              <td class="minus">-</td>
+              <td class="plus">+</td>
+              <td class="plus">+</td>
+              <td class="plus">+</td>
+              <td>100$</td>
+            </tr>
+            <tr>
+              <td>Instant Replays</td>
+              <td class="minus">-</td>
+              <td class="plus">+</td>
+              <td class="plus">+</td>
+              <td class="plus">+</td>
+              <td>100$</td>
+            </tr>
+            <tr>
+              <td>Server Admin</td>
+              <td class="minus">-</td>
+              <td class="minus">-</td>
+              <td class="plus">+</td>
+              <td class="plus">+</td>
+              <td>70$</td>
+            </tr>
+            <tr>
+              <td>SMM+</td>
+              <td class="minus">-</td>
+              <td class="minus">-</td>
+              <td class="minus">-</td>
+              <td class="plus">+</td>
+              <td>50$</td>
+            </tr>
+            <tr>
+              <td>Talent Search</td>
+              <td class="minus">-</td>
+              <td class="minus">-</td>
+              <td class="minus">-</td>
+              <td class="plus">+</td>
+              <td>100$*</td>
+            </tr>
+            <tr>
+              <td>Design Kit</td>
+              <td class="minus">-</td>
+              <td class="minus">-</td>
+              <td class="minus">-</td>
+              <td class="plus">+</td>
+              <td>1.000$*</td>
+            </tr>
+            <tr>
+              <td>Overlays</td>
+              <td class="minus">-</td>
+              <td class="minus">-</td>
+              <td class="plus">+</td>
+              <td class="plus">+</td>
+              <td>700$*</td>
+            </tr>
+            <tr>
+              <td>Tournament Documentation</td>
+              <td class="minus">-</td>
+              <td class="minus">-</td>
+              <td class="minus">-</td>
+              <td class="plus">+</td>
+              <td>200$*</td>
+            </tr>
+            <tr>
+              <td>Video Development</td>
+              <td class="minus">-</td>
+              <td class="minus">-</td>
+              <td class="minus">-</td>
+              <td class="plus">+</td>
+              <td>700$*</td>
+            </tr>
+            <tr>
+              <td>1 DAY FULL PRICE</td>
+              <td>250$</td>
+              <td>450$</td>
+              <td>520$</td>
+              <td>3270$</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Описания (две секции, как у вас было) -->
+    <section class="descriptions">
+      <div class="description">
+        <h3>Live Broadcasting</h3>
+        <p>
+          We provide a comprehensive live streaming experience...
+        </p>
+      </div>
+      <div class="description">
+        <h3>In-Game Observer</h3>
+        <p>
+          Our seasoned observers, each with over 10 years of experience...
+        </p>
+      </div>
+      <div class="description">
+        <h3>Instant Replays</h3>
+        <p>
+          We capture the most exciting moments in real time...
+        </p>
+      </div>
+      <div class="description">
+        <h3>Server Administration</h3>
+        <p>
+          We manage server configuration and communication with teams...
+        </p>
+      </div>
+      <div class="description">
+        <h3>SMM+</h3>
+        <p>
+          We handle all social media activities during your tournament...
+        </p>
+      </div>
+      <div class="description">
+        <h3>Talent Search</h3>
+        <p>
+          We scout and invite skilled commentators, analysts, and more.
+        </p>
+      </div>
+    </section>
+
+    <section class="descriptions">
+      <div class="description">
+        <h3>Design Kit</h3>
+        <p>
+          We create high-quality graphics and branding elements...
+        </p>
+      </div>
+      <div class="description">
+        <h3>Overlays</h3>
+        <p>
+          Our advanced titling and overlay system provides...
+        </p>
+      </div>
+      <div class="description">
+        <h3>Tournament Documentation</h3>
+        <p>
+          We develop comprehensive master documents covering every detail...
+        </p>
+      </div>
+      <div class="description">
+        <h3>Video Development</h3>
+        <p>
+          We produce high-impact video content, such as intro videos, highlight reels...
+        </p>
+      </div>
+    </section>
+
+  </div><!-- /.page-content -->
+
+</body>
+</html>

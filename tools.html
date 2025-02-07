@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Tools Page</title>
+  <!-- Подключаем стили для tools -->
+  <link rel="stylesheet" href="tools.css">
+  <!-- Скрипт для плавного перехода (тот же, что и на главной) -->
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- Альфа-транзишн (если нужен) -->
+  <div id="transitionOverlay">
+    <video
+      id="transitionVideo"
+      class="transition-video"
+      muted
+      src="assets/transition-alpha.webm"
+    ></video>
+  </div>
+
+  <!-- iframeContainer -->
+  <div id="iframeContainer"></div>
+
+  <!-- Контейнер страницы -->
+  <div class="page-content">
+
+    <!-- Основной фон (опционально) -->
+    <div class="bg-base"></div>
+    <div class="dust-overlay"></div>
+    <div class="rect-594"></div>
+
+    <!-- Логотип -->
+    <a href="index.html" class="nav-link logo"></a>
+
+    <!-- Кнопки (Product / Services / About / Events) -->
+    <div class="nav-buttons">
+      <a href="tools.html" class="nav-link">
+        <div class="product-button">
+          <video src="images/Product button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+      <a href="services.html" class="nav-link">
+        <div class="services-button">
+          <video src="images/Services button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+      <a href="about.html" class="nav-link">
+        <div class="about-button">
+          <video src="images/About button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+      <a href="events.html" class="nav-link">
+        <div class="events-button">
+          <video src="images/Events button.webm" loop muted autoplay playsinline></video>
+        </div>
+      </a>
+    </div>
+
+    <!-- Карточки продуктов -->
+    <div class="card" id="card1">
+      <div class="rect"></div>
+      <div class="title">OVERLAY SYSTEM</div>
+      <div class="desc">
+        with this program you will be able to link the camera to a specific player and 
+        when the observer takes this player the linked camera will show him. 
+        The program will help you raise the level of your live broadcast 
+        to the highest level and give the viewer more impressions 
+        from watching your live broadcast
+      </div>
+      <div class="download">Download</div>
+    </div>
+
+    <div class="card" id="card2">
+      <div class="rect"></div>
+      <div class="title">VMIX GSI CAM</div>
+      <div class="desc">
+        with this program you will be able to link the camera to a specific player and 
+        when the observer takes this player the linked camera will show him. 
+        The program will help you raise the level of your live broadcast 
+        to the highest level and give the viewer more impressions 
+        from watching your live broadcast
+      </div>
+      <div class="download">Download</div>
+    </div>
+
+    <div class="card" id="card3">
+      <div class="rect"></div>
+      <div class="title">COMPANION GSI TRIGGER</div>
+      <div class="desc">
+        with this program you will be able to link the camera to a specific player and 
+        when the observer takes this player the linked camera will show him. 
+        The program will help you raise the level of your live broadcast 
+        to the highest level and give the viewer more impressions 
+        from watching your live broadcast
+      </div>
+      <div class="download">Download</div>
+    </div>
+
+  </div><!-- /.page-content -->
+
+</body>
+</html>

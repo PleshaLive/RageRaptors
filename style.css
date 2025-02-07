@@ -1,0 +1,300 @@
+/* Общие сбросы */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  background: #111;
+  color: #B0B0B0;
+  font-family: 'Roboto Mono', monospace;
+  /* Overflow не запрещаем, чтобы была возможность прокрутки */
+}
+
+/* Верхняя часть страницы, как в about.html */
+.page-content {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  margin: 0 auto;
+}
+
+/* Фоновое изображение для верхней части */
+.bg-main {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  top: 0;
+  left: 0;
+  background: url("images/BG_main.png") center/cover no-repeat;
+  z-index: -1;
+}
+
+/* Логотип – позиционирование согласно about.css */
+.logo {
+  position: absolute;
+  width: 420px;
+  height: 192px;
+  left: 85px;
+  top: 20px;
+  background: url("images/LOGO.png") no-repeat center;
+  background-size: contain;
+}
+
+/* Навигация – позиционирование согласно about.css */
+.nav-buttons {
+  position: absolute;
+  top: 74px;
+  left: 974px;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+/* Стили для кнопок */
+.product-button,
+.services-button,
+.about-button {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.product-button {
+  width: 168px;
+  height: 85px;
+  background: url("images/Product button.png") no-repeat center;
+  background-size: contain;
+}
+
+.services-button {
+  width: 200px;
+  height: 85px;
+  background: url("images/Services button.png") no-repeat center;
+  background-size: contain;
+}
+
+.about-button {
+  width: 209px;
+  height: 85px;
+  background: url("images/About button.png") no-repeat center;
+  background-size: contain;
+}
+
+/* Видео в кнопках (hover) */
+.product-button video,
+.services-button video,
+.about-button video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.product-button:hover video,
+.services-button:hover video,
+.about-button:hover video {
+  opacity: 1;
+}
+
+/* Transition overlay (скрыт по умолчанию) */
+#transitionOverlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#transitionVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: transparent;
+}
+
+/* Секция Pricing Plans */
+.pricing-section {
+  padding: 60px 85px;
+  background: #111;
+  color: #B0B0B0;
+  margin-top: 120px; /* Опущена на дополнительные 100px */
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pricing-header h1 {
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Контейнер карточек прайсинга */
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Карточки тарифов */
+.pricing-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  width: 280px;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: transform 0.3s, border-color 0.3s;
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: scale(1.05);
+  border-color: #e25818;
+}
+
+.pricing-card h2 {
+  font-size: 24px;
+  color: #fff;
+  margin: 15px 0;
+}
+
+.pricing-card .price {
+  font-size: 28px;
+  color: #e25818;
+  margin: 10px 0;
+}
+
+.pricing-card .per-day {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.pricing-card .plan-desc {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  font-size: 14px;
+  color: #ccc;
+  text-align: left;
+}
+
+.pricing-card ul li {
+  margin-bottom: 10px;
+}
+
+.pricing-card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #e25818;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.pricing-card .plan-image {
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.plan-image.free-img {
+  background-image: url('images/pricing-free.png');
+}
+
+.plan-image.personal-img {
+  background-image: url('images/pricing-personal.png');
+}
+
+.plan-image.professional-img {
+  background-image: url('images/pricing-professional.png');
+}
+
+.plan-image.enterprise-img {
+  background-image: url('images/pricing-enterprise.png');
+}
+
+.pricing-card .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #e25818;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.pricing-footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* Секция Compare Plans */
+.compare-plans-section {
+  padding: 60px 85px;
+  background: #111;
+  color: #B0B0B0;
+  margin-top: 120px; /* Дополнительное смещение вниз */
+}
+
+.compare-plans-section h2 {
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.compare-table-container {
+  overflow-x: auto;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.compare-table th,
+.compare-table td {
+  border: 1px solid #333;
+  padding: 12px;
+  text-align: center;
+}
+
+.compare-table th {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.compare-table td {
+  background-color: #111;
+}
