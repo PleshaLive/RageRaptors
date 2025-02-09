@@ -57,7 +57,7 @@ html, body {
 #transitionOverlay {
   display: none;
   position: fixed;
-  z-index: 9999;
+  z-index: 99;
   top: 0;
   left: 0;
   width: 100%;
@@ -523,4 +523,64 @@ html, body {
   top: 1873.35px;
   background: url("images/photo t.png") no-repeat center;
   background-size: cover;
+}
+
+/* ====== СТИЛЬНЫЙ КАСТОМНЫЙ СКРОЛЛ ====== */
+
+/* 1. Стиль для Chrome / Edge (Chromium) / Opera / Safari */
+::-webkit-scrollbar {
+  width: 15px; /* Толщина скролла */
+  background: #1a1a1a00; /* Фон под "дорожкой" */
+}
+
+/* Дорожка */
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #13131300 0%, #00000000 100%);
+  border-radius: 0px;
+}
+
+/* Ползунок */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #271d1d 0%, #1a1a1a 100%);
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #DC5C33, #DC5C33);
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgb(179, 112, 35), inset 0 0 2px rgb(223, 110, 45);
+  transition: 0.3s;
+}
+
+/* ====== СТИЛИ ДЛЯ КНОПКИ "ПРОКРУТИТЬ ВВЕРХ" ====== */
+#scrollToTopBtn {
+  border: 0;
+  position: fixed;
+  top: 20px;       /* перемещаем кнопку ближе к верху экрана */
+  right: 20px;     /* можно настроить по вашему усмотрению */
+  display: none;
+  background-color: transparent;
+  color: #000;
+  border: none;
+  border-radius: 0;
+  padding: 9;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999999; /* максимально высокий z-index */
+}
+
+#scrollToTopBtn:hover {
+  transform: scale(1.2);
+}
+
+#scrollToTopBtn img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  transition: transform 0.3s ease;
 }

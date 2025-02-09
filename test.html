@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Проверка кнопки "Прокрутить вверх"</title>
+  <style>
+    /* Фон страницы: градиент + картинка (замените URL на свой, если нужно) */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-y: auto;
+      background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0) 100%
+        ),
+        url("https://via.placeholder.com/1920x1080") no-repeat center top;
+      background-size: cover;
+      background-attachment: fixed;
+      background-blend-mode: overlay;
+    }
+    /* Контент страницы (делает страницу длинной) */
+    .content {
+      height: 3000px;
+    }
+    /* Стили кнопки "Прокрутить вверх" */
+    #scrollToTopBtn {
+      position: fixed;
+      bottom: 50px;
+      right: 70px;
+      z-index: 9999;
+      
+      /* Изначально скрыта */
+      opacity: 0;
+      pointer-events: none;
+      
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      
+      /* Плавное появление и трансформация при наведении */
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    /* При наведении кнопка слегка увеличивается */
+    #scrollToTopBtn:hover {
+      transform: scale(1.06);
+    }
+    /* Стили для изображения внутри кнопки */
+    #scrollToTopBtn img {
+      width: 80px;
+      height: 80px;
+      display: block;
+    }
+    /* Класс, который делает кнопку видимой */
+    #scrollToTopBtn.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1 style="padding-top: 20px; text-align: center;">Прокрутите вниз для теста</h1>
+  </div>
+
+  <!-- Кнопка "Прокрутить вверх" -->
+  <button id="scrollToTopBtn" title="Вверх">
+    <!-- Замените URL изображения на нужный вам -->
+    <img src="https://via.placeholder.com/80x80?text=Up" alt="Вверх">
+  </button>
+
+  <script>
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.addEventListener("scroll", function() {
+      // Получаем текущую позицию прокрутки
+      const scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      console.log("Scroll Position:", scrollPos);
+      if (scrollPos > 50) {
+        scrollToTopBtn.classList.add("show");
+      } else {
+        scrollToTopBtn.classList.remove("show");
+      }
+    });
+
+    scrollToTopBtn.addEventListener("click", function() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+</body>
+</html>

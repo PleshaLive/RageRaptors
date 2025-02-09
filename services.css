@@ -67,6 +67,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: transparent;
   pointer-events: none;
 }
 #transitionVideo {
@@ -496,4 +497,26 @@ html, body {
   transform: scale(var(--card-hover-scale));
   border-color: var(--accent-color);
   box-shadow: 0 8px 32px rgba(226, 88, 24, 0.5);
+}
+
+/* ====== СТИЛЬНЫЙ КАСТОМНЫЙ СКРОЛЛ ====== */
+
+/* 1. Стиль для Chrome / Edge (Chromium) / Opera / Safari */
+::-webkit-scrollbar {
+  width: 10px; /* Толщина скролла */
+  background: #1a1a1a; /* Прозрачный фон под дорожкой */
+}
+
+/* 2. Дорожка скролла */
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #271d1d 0%, #1a1a1a 100%);
+  border-radius: 0px;
+}
+
+/* 3. Ползунок скролла */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #DC5C33, #DC5C33);
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgb(179, 112, 35), inset 0 0 2px rgb(223, 110, 45);
+  transition: 0.3s;
 }

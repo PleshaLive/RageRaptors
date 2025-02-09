@@ -167,3 +167,27 @@
     color: #B0B0B0;
   }
   
+  /* ====== СТИЛЬНЫЙ КАСТОМНЫЙ СКРОЛЛ ====== */
+
+/* 1. Стиль для Chrome / Edge (Chromium) / Opera / Safari */
+::-webkit-scrollbar {
+  width: 15px; /* Толщина скролла */
+  background: #1a1a1a00; /* Фон под "дорожкой" */
+}
+
+/* Дорожка */
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #13131300 0%, #00000000 100%);
+  /* Можно добавить скругление и тень, если хочется ещё эффектнее */
+  border-radius: 0px;
+}
+
+/* Ползунок */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #DC5C33, #DC5C33);
+  border-radius: 5px;
+  box-shadow:
+    0 0 2px rgb(179, 112, 35),   /* внешнее свечение */
+    inset 0 0 2px rgb(223, 110, 45); /* небольшая внутренняя тень */
+  transition: 0.3s; /* Плавные переходы */
+}

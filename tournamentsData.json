@@ -1,30 +1,1179 @@
 [
-  {
-    "id": "_crbiymm7o",
-    "date": "1",
-    "game": "1",
-    "championship": "1",
-    "link": "1"
-  },
-  {
-    "id": "_3r0p75dwb",
-    "date": "2",
-    "game": "2",
-    "championship": "2",
-    "link": "2"
-  },
-  {
-    "id": "_lzk5f10c6",
-    "date": "3",
-    "game": "3",
-    "championship": "3",
-    "link": "3"
-  },
-  {
-    "id": "_mqe3wb1lp",
-    "date": "4",
-    "game": "4",
-    "championship": "4",
-    "link": "4"
-  }
-]
+    {
+      "id": "_ssileague1",
+      "date": "2015 13 JAN - 03 FEB",
+      "game": "CS:GO",
+      "championship": "StarSeries & i-League CS:GO Season 1",
+      "link": "https://liquipedia.net/counterstrike/StarLadder/StarSeries/XII"
+    },
+    {
+      "id": "_ecs3",
+      "date": "2015 10 FEB - 15 FEB",
+      "game": "CS:GO",
+      "championship": "ECS Season 3",
+      "link": "https://liquipedia.net/counterstrike/ECS/Season_3"
+    },
+    {
+      "id": "_ecs2",
+      "date": "2015 01 MAR - 05 MAR",
+      "game": "CS:GO",
+      "championship": "ECS Season 2",
+      "link": "https://liquipedia.net/counterstrike/ECS/Season_2"
+    },
+    {
+      "id": "_ssileague2",
+      "date": "2015 18 MAY - 21 JUN",
+      "game": "CS:GO",
+      "championship": "StarSeries & i-League CS:GO Season 2",
+      "link": "https://liquipedia.net/counterstrike/StarLadder/StarSeries/XIII"
+    },
+    {
+      "id": "_showmatchegbg2a",
+      "date": "2015 20 OCT - 20 OCT",
+      "game": "CS:GO",
+      "championship": "Showmatch EGB vs G2A",
+      "link": "https://liquipedia.net/counterstrike/Showmatch_EGB_vs_G2A"
+    },
+    {
+      "id": "_ssileague3",
+      "date": "2016 13 JAN - 17 JAN",
+      "game": "CS:GO",
+      "championship": "StarSeries & i-League CS:GO Season 3",
+      "link": "https://liquipedia.net/counterstrike/StarLadder/i-League_StarSeries/XIV"
+    },
+    {
+      "id": "_fragleague",
+      "date": "2016 10 MAR - 12 MAR",
+      "game": "CS:GO",
+      "championship": "Fragleague Series",
+      "link": "https://liquipedia.net/counterstrike/Fragleague"
+    },
+    {
+      "id": "_ecs4",
+      "date": "2016 15 MAR - 20 MAR",
+      "game": "CS:GO",
+      "championship": "ECS Season 4",
+      "link": "https://liquipedia.net/counterstrike/ECS/Season_4"
+    },
+    {
+      "id": "_ssileague4",
+      "date": "2016 13 MAY - 22 MAY",
+      "game": "CS:GO",
+      "championship": "StarSeries & i-League CS:GO Season 4",
+      "link": "https://liquipedia.net/counterstrike/StarLadder/i-League_StarSeries/Season_4"
+    },
+    {
+      "id": "_botwc2016",
+      "date": "2016 05 JUL - 07 JUL",
+      "game": "CS:GO",
+      "championship": "Bot World Championship 2016",
+      "link": "https://liquipedia.net/counterstrike/Bot_World_Championship_2016"
+    },
+    {
+      "id": "_mlgcol2016",
+      "date": "2016 29 JUL - 03 AUG",
+      "game": "CS:GO",
+      "championship": "MLG Major Championship: Columbus 2016",
+      "link": "https://liquipedia.net/counterstrike/MLG_Major_Championship:_Columbus_2016"
+    },
+    {
+      "id": "_binarydragons",
+      "date": "2016 01 SEP - 03 SEP",
+      "game": "CS:GO",
+      "championship": "Binary Dragons csgopolygon",
+      "link": "https://liquipedia.net/counterstrike/Binary_Dragons"
+    },
+    {
+      "id": "_ssileague6",
+      "date": "2016 07 SEP - 11 SEP",
+      "game": "CS:GO",
+      "championship": "StarSeries & i-League CS:GO Season 6",
+      "link": "https://liquipedia.net/counterstrike/StarLadder/i-League_StarSeries/Season_6"
+    },
+    {
+      "id": "_fragmasters4",
+      "date": "2017 07 FEB - 12 FEB",
+      "game": "CS:GO",
+      "championship": "Fragbite Masters Season 4",
+      "link": "https://liquipedia.net/counterstrike/Fragbite_Masters/Season_4"
+    },
+    {
+      "id": "_fragmasters5",
+      "date": "2017 14 FEB - 19 FEB",
+      "game": "CS:GO",
+      "championship": "Fragbite Masters Season 5",
+      "link": "https://liquipedia.net/counterstrike/Fragbite_Masters/Season_5"
+    },
+    {
+      "id": "_gfinityelite2",
+      "date": "2017 10 MAR - 12 MAR",
+      "game": "CS:GO",
+      "championship": "Gfinity Elite Series Season 2",
+      "link": "https://liquipedia.net/counterstrike/Gfinity_Elite_Series/Season_2"
+    },
+    {
+      "id": "_ssileague5",
+      "date": "2017 04 APR - 09 APR",
+      "game": "CS:GO",
+      "championship": "StarSeries & i-League CS:GO Season 5",
+      "link": "https://liquipedia.net/counterstrike/StarLadder_i-League/StarSeries/Season_3"
+    },
+    {
+      "id": "_betsnetchallenger",
+      "date": "2017 15 APR - 16 APR",
+      "game": "CS:GO",
+      "championship": "Bets.net Challenger Series",
+      "link": "https://liquipedia.net/counterstrike/Bets.net_Challenger_Series"
+    },
+    {
+      "id": "_ecs7",
+      "date": "2017 20 MAY - 25 MAY",
+      "game": "CS:GO",
+      "championship": "ECS Season 7",
+      "link": "https://liquipedia.net/counterstrike/ECS/Season_7"
+    },
+    {
+      "id": "_botwc2017",
+      "date": "2017 10 JUN - 12 JUN",
+      "game": "CS:GO",
+      "championship": "BOT World Championship 2017",
+      "link": "https://liquipedia.net/counterstrike/BOT_World_Championship_2017"
+    },
+    {
+      "id": "_blastcph2017",
+      "date": "2017 05 JUL - 05 JUL",
+      "game": "CS:GO",
+      "championship": "BLAST Pro Series: Copenhagen 2017",
+      "link": "https://liquipedia.net/counterstrike/BLAST_Pro_Series:_Copenhagen_2017"
+    },
+    {
+      "id": "_pglkrakmin",
+      "date": "2017 11 JUL - 15 JUL",
+      "game": "CS:GO",
+      "championship": "PGL Major Kraków Minors",
+      "link": "https://liquipedia.net/counterstrike/PGL_Major_Krak%C3%B3w_Minors"
+    },
+    {
+      "id": "_pglkrak2017",
+      "date": "2017 16 JUL - 23 JUL",
+      "game": "CS:GO",
+      "championship": "PGL Major Kraków 2017",
+      "link": "https://liquipedia.net/counterstrike/PGL_Major_Krak%C3%B3w_2017"
+    },
+    {
+      "id": "_ti7",
+      "date": "2017 07 AUG - 14 AUG",
+      "game": "DOTA2",
+      "championship": "The International 7",
+      "link": "https://liquipedia.net/dota2/The_International_7"
+    },
+    {
+      "id": "_ecs8",
+      "date": "2017 15 AUG - 20 AUG",
+      "game": "CS:GO",
+      "championship": "ECS Season 8",
+      "link": "https://liquipedia.net/counterstrike/ECS/Season_8"
+    },
+    {
+      "id": "_esgtourmykonos2017",
+      "date": "2017 10 SEP - 12 SEP",
+      "game": "CS:GO",
+      "championship": "ESG Tour Mykonos 2017",
+      "link": "https://liquipedia.net/counterstrike/ESG_Tour_Mykonos_2017"
+    },
+    {
+      "id": "_rogmasters2017",
+      "date": "2017 05 OCT - 08 OCT",
+      "game": "CS:GO",
+      "championship": "ROG MASTERS 2017",
+      "link": "https://liquipedia.net/counterstrike/ROG_MASTERS_2017"
+    },
+    {
+      "id": "_elea2017",
+      "date": "2017 01 NOV - 05 NOV",
+      "game": "CS:GO",
+      "championship": "ELEAGUE Major: Atlanta 2017",
+      "link": "https://liquipedia.net/counterstrike/ELEAGUE_Major:_Atlanta_2017"
+    },
+    {
+      "id": "_eleaatlmin",
+      "date": "2017 02 NOV - 05 NOV",
+      "game": "CS:GO",
+      "championship": "ELEAGUE Major Atlanta Minors",
+      "link": "https://liquipedia.net/counterstrike/ELEAGUE_Major:_Atlanta_Minors"
+    },
+    {
+      "id": "_intelgs1",
+      "date": "2017 06 NOV - 19 NOV",
+      "game": "CS:GO",
+      "championship": "Intel Grand Slam Season 1",
+      "link": "https://liquipedia.net/counterstrike/Intel_Grand_Slam/Season_1"
+    },
+    {
+      "id": "_wesg2017cs",
+      "date": "2017 22 NOV - 26 NOV",
+      "game": "CS:GO",
+      "championship": "WESG 2017 CS",
+      "link": "https://liquipedia.net/counterstrike/World_Electronic_Sports_Games/2017"
+    },
+    {
+      "id": "_sltvproseries14",
+      "date": "2017 05 DEC - 10 DEC",
+      "game": "CS:GO",
+      "championship": "SLTV ProSeries XIV",
+      "link": "https://liquipedia.net/counterstrike/SLTV_ProSeries/XIV"
+    },
+    {
+      "id": "_cssummit2017",
+      "date": "2017 20 DEC - 22 DEC",
+      "game": "CS:GO",
+      "championship": "cs_summit 2017",
+      "link": "https://liquipedia.net/counterstrike/CS_Summit/2017"
+    },
+    {
+      "id": "_eleabosmin",
+      "date": "2018 18 JAN - 24 JAN",
+      "game": "CS:GO",
+      "championship": "ELEAGUE Major: Boston Minors",
+      "link": "https://liquipedia.net/counterstrike/ELEAGUE_Major:_Boston_Minors"
+    },
+    {
+      "id": "_ggbetwintercup",
+      "date": "2018 20 JAN - 22 JAN",
+      "game": "CS:GO",
+      "championship": "GG.Bet Winter Cup",
+      "link": "https://liquipedia.net/counterstrike/GG.Bet_Winter_Cup"
+    },
+    {
+      "id": "_eleabos2018",
+      "date": "2018 25 JAN - 02 FEB",
+      "game": "CS:GO",
+      "championship": "ELEAGUE Major: Boston 2018",
+      "link": "https://liquipedia.net/counterstrike/ELEAGUE_Major:_Boston_2018"
+    },
+    {
+      "id": "_slihearthstone3",
+      "date": "2018 05 FEB - 09 FEB",
+      "game": "Hearthstone",
+      "championship": "SL i-League Hearthstone StarSeries Season 3",
+      "link": "https://liquipedia.net/hearthstone/SL_i-League_Hearthstone_StarSeries/Season_3"
+    },
+    {
+      "id": "_europeanchampionscup",
+      "date": "2018 10 FEB - 11 FEB",
+      "game": "CS:GO",
+      "championship": "European Champions Cup",
+      "link": "https://liquipedia.net/counterstrike/European_Champions_Cup"
+    },
+    {
+      "id": "_pubgslweek1",
+      "date": "2018 02 MAR - 04 MAR",
+      "game": "PUBG",
+      "championship": "PUBG StarLadder League 2018 - Week 1",
+      "link": "https://liquipedia.net/pubg/PUBG_StarLadder_League_2018_-_Week_1"
+    },
+    {
+      "id": "_pubgslweek2",
+      "date": "2018 09 MAR - 11 MAR",
+      "game": "PUBG",
+      "championship": "PUBG StarLadder League 2018 - Week 2",
+      "link": "https://liquipedia.net/pubg/PUBG_StarLadder_League_2018_-_Week_2"
+    },
+    {
+      "id": "_supernovacs",
+      "date": "2018 15 MAR - 16 MAR",
+      "game": "CS:GO",
+      "championship": "SuperNova CS",
+      "link": "https://liquipedia.net/counterstrike/SuperNova_CS"
+    },
+    {
+      "id": "_pubgslweek3",
+      "date": "2018 16 MAR - 18 MAR",
+      "game": "PUBG",
+      "championship": "PUBG StarLadder League 2018 - Week 3",
+      "link": "https://liquipedia.net/pubg/PUBG_StarLadder_League_2018_-_Week_3"
+    },
+    {
+      "id": "_pubgslweek4",
+      "date": "2018 23 MAR - 25 MAR",
+      "game": "PUBG",
+      "championship": "PUBG StarLadder League 2018 - Week 4",
+      "link": "https://liquipedia.net/pubg/PUBG_StarLadder_League_2018_-_Week_4"
+    },
+    {
+      "id": "_pubgmobileclubopen",
+      "date": "2018 01 APR - 07 APR",
+      "game": "PUBG Mobile",
+      "championship": "PUBG Mobile Club Open - Spring Split",
+      "link": "https://liquipedia.net/pubg/PUBG_Mobile_Club_Open_-_Spring_Split"
+    },
+    {
+      "id": "_tnachallengecup",
+      "date": "2018 15 APR - 17 APR",
+      "game": "CS:GO",
+      "championship": "TNA Challenge Cup",
+      "link": "https://liquipedia.net/counterstrike/TNA_Challenge_Cup"
+    },
+    {
+      "id": "_malta",
+      "date": "2018 20 APR - 21 APR",
+      "game": "CS:GO",
+      "championship": "Malta",
+      "link": "https://liquipedia.net/counterstrike/Malta"
+    },
+    {
+      "id": "_hell6",
+      "date": "2018 05 MAY - 06 MAY",
+      "game": "CS:GO",
+      "championship": "Hellcase Cup #6",
+      "link": "https://liquipedia.net/counterstrike/Hellcase_Cup_6"
+    },
+    {
+      "id": "_hell7",
+      "date": "2018 06 JUN - 07 JUN",
+      "game": "CS:GO",
+      "championship": "Hellcase Cup #7",
+      "link": "https://liquipedia.net/counterstrike/Hellcase_Cup_7"
+    },
+    {
+      "id": "_blastistanbul2018",
+      "date": "2018 07 JUN - 09 JUN",
+      "game": "CS:GO",
+      "championship": "BLAST Pro Series Istanbul 2018",
+      "link": "https://liquipedia.net/counterstrike/BLAST_Pro_Series:_Istanbul_2018"
+    },
+    {
+      "id": "_pubgglobal2018cis",
+      "date": "2018 07 JUN - 09 JUN",
+      "game": "PUBG",
+      "championship": "PUBG Global Invitational 2018 - CIS",
+      "link": "https://liquipedia.net/pubg/PUBG_Global_Invitational_2018_-_CIS"
+    },
+    {
+      "id": "_blastlisbon2018",
+      "date": "2018 10 JUL - 12 JUL",
+      "game": "CS:GO",
+      "championship": "BLAST Pro Series Lisbon 2018",
+      "link": "https://liquipedia.net/counterstrike/BLAST_Pro_Series:_Lisbon_2018"
+    },
+    {
+      "id": "_pubgmobileeuro",
+      "date": "2018 10 JUL - 12 JUL",
+      "game": "PUBG Mobile",
+      "championship": "PUBG Mobile Star Challenge 2018 - Europe",
+      "link": "https://liquipedia.net/pubg/PUBG_Mobile_Star_Challenge_2018_-_Europe"
+    },
+    {
+      "id": "_ti8",
+      "date": "2018 08 AUG - 25 AUG",
+      "game": "DOTA2",
+      "championship": "The International 8",
+      "link": "https://liquipedia.net/dota2/The_International_8"
+    },
+    {
+      "id": "_faceitlondonmin",
+      "date": "2018 04 SEP - 10 SEP",
+      "game": "CS:GO",
+      "championship": "FACEIT Major London Minors",
+      "link": "https://liquipedia.net/counterstrike/FACEIT_Major:_London_Minors"
+    },
+    {
+      "id": "_faceitlondon2018",
+      "date": "2018 11 SEP - 23 SEP",
+      "game": "CS:GO",
+      "championship": "FACEIT Major: London 2018",
+      "link": "https://liquipedia.net/counterstrike/FACEIT_Major:_London_2018"
+    },
+    {
+      "id": "_fortniteeasternclash",
+      "date": "2018 20 SEP - 22 SEP",
+      "game": "Fortnite",
+      "championship": "Fortnite Eastern Clash",
+      "link": "https://liquipedia.net/fortnite/Fortnite_Eastern_Clash"
+    },
+    {
+      "id": "_forgeofmasters2",
+      "date": "2018 10 OCT - 14 OCT",
+      "game": "CS:GO",
+      "championship": "Forge of Masters Season 2",
+      "link": "https://liquipedia.net/counterstrike/Forge_of_Masters/Season_2"
+    },
+    {
+      "id": "_csgonetcup2",
+      "date": "2018 10 NOV - 11 NOV",
+      "game": "CS:GO",
+      "championship": "CSGO.NET Cup 2",
+      "link": "https://liquipedia.net/counterstrike/CSGO.NET_Cup_2"
+    },
+    {
+      "id": "_betsnetmasters",
+      "date": "2018 15 NOV - 17 NOV",
+      "game": "CS:GO",
+      "championship": "Bets.Net Masters",
+      "link": "https://liquipedia.net/counterstrike/Bets.Net_Masters"
+    },
+    {
+      "id": "_bravobetcup",
+      "date": "2018 01 DEC - 02 DEC",
+      "game": "CS:GO",
+      "championship": "BravoBet Cup",
+      "link": "https://liquipedia.net/counterstrike/BravoBet_Cup"
+    },
+    {
+      "id": "_zotaccupmasters2018",
+      "date": "2018 05 DEC - 06 DEC",
+      "game": "CS:GO",
+      "championship": "ZOTAC Cup Masters 2018",
+      "link": "https://liquipedia.net/counterstrike/ZOTAC_Cup_Masters_2018"
+    },
+    {
+      "id": "_wesg2018",
+      "date": "2018 15 DEC - 17 DEC",
+      "game": "CS:GO",
+      "championship": "WESG 2018",
+      "link": "https://liquipedia.net/counterstrike/WESG/2018"
+    },
+    {
+      "id": "_cssummit2",
+      "date": "2018 20 DEC - 22 DEC",
+      "game": "CS:GO",
+      "championship": "cs_summit 2",
+      "link": "https://liquipedia.net/counterstrike/CS_Summit/2"
+    },
+    {
+      "id": "_appolo1phase2",
+      "date": "2019 25 FEB - 27 FEB",
+      "game": "CS:GO",
+      "championship": "Appolo1 Series: Phase 2",
+      "link": "https://liquipedia.net/counterstrike/Appolo1_Series/Phase_2"
+    },
+    {
+      "id": "_blastbahrain2019",
+      "date": "2019 03 MAR - 03 MAR",
+      "game": "CS:GO",
+      "championship": "BLAST Pro Series: Global Final Bahrain 2019",
+      "link": "https://liquipedia.net/counterstrike/BLAST_Pro_Series:_Global_Final_Bahrain_2019"
+    },
+    {
+      "id": "_blastmoscow2019",
+      "date": "2019 15 MAR - 15 MAR",
+      "game": "CS:GO",
+      "championship": "BLAST Pro Series: Moscow 2019",
+      "link": "https://liquipedia.net/counterstrike/BLAST_Pro_Series:_Moscow_2019"
+    },
+    {
+      "id": "_blastla2019",
+      "date": "2019 20 MAR - 20 MAR",
+      "game": "CS:GO",
+      "championship": "BLAST Pro Series Los Angeles 2019",
+      "link": "https://liquipedia.net/counterstrike/BLAST_Pro_Series:_Los_Angeles_2019"
+    },
+    {
+      "id": "_ssileague7",
+      "date": "2019 30 MAR - 07 APR",
+      "game": "CS:GO",
+      "championship": "StarSeries & i-League CS:GO Season 7",
+      "link": "https://liquipedia.net/counterstrike/StarSeries_i-League/Season_7"
+    },
+    {
+      "id": "_ggbetsydney",
+      "date": "2019 05 APR - 06 APR",
+      "game": "CS:GO",
+      "championship": "GG.BET Sydney Invitational",
+      "link": "https://liquipedia.net/counterstrike/GG.BET_Sydney_Invitational"
+    },
+    {
+      "id": "_pubgleague",
+      "date": "2019 01 JUN - 08 JUN",
+      "game": "PUBG",
+      "championship": "StarSeries i-League PUBG",
+      "link": "https://liquipedia.net/pubg/StarSeries_i-League_PUBG"
+    },
+    {
+      "id": "_pglregmineu",
+      "date": "2019 01 JUN - 03 JUN",
+      "game": "CS:GO",
+      "championship": "PGL Regional Minor Championship Europe",
+      "link": "https://liquipedia.net/counterstrike/PGL_Regional_Minor_Championship_Europe"
+    },
+    {
+      "id": "_pglregminasia",
+      "date": "2019 01 JUN - 03 JUN",
+      "game": "CS:GO",
+      "championship": "PGL Regional Minor Championship Asia",
+      "link": "https://liquipedia.net/counterstrike/PGL_Regional_Minor_Championship_Asia"
+    },
+    {
+      "id": "_stladregmin",
+      "date": "2019 05 JUN - 07 JUN",
+      "game": "CS:GO",
+      "championship": "StarLadder Regional Minor Championship",
+      "link": "https://liquipedia.net/counterstrike/StarLadder_Regional_Minor_Championship"
+    },
+    {
+      "id": "_weplayomega",
+      "date": "2019 06 JUN - 09 JUN",
+      "game": "DOTA2",
+      "championship": "WePlay! OMEGA League",
+      "link": "https://liquipedia.net/dota2/WePlay!_OMEGA_League"
+    },
+    {
+      "id": "_wesaavecharity",
+      "date": "2019 15 JUN - 15 JUN",
+      "game": "DOTA2",
+      "championship": "WeSave! Charity Play",
+      "link": "https://liquipedia.net/dota2/WeSave!_Charity_Play"
+    },
+    {
+      "id": "_pubgs2",
+      "date": "2019 15 JUN - 22 JUN",
+      "game": "PUBG",
+      "championship": "StarSeries i-League PUBG S2",
+      "link": "https://liquipedia.net/pubg/StarSeries_i-League_PUBG_S2"
+    },
+    {
+      "id": "_weplaypushka",
+      "date": "2019 01 JUL - 04 JUL",
+      "game": "DOTA2",
+      "championship": "WePlay! Pushka League",
+      "link": "https://liquipedia.net/dota2/WePlay!_Pushka_League"
+    },
+    {
+      "id": "_pubgeu1",
+      "date": "2019 03 JUL - 10 JUL",
+      "game": "PUBG",
+      "championship": "PUBG Europe League PHASE 1",
+      "link": "https://liquipedia.net/pubg/PUBG_Europe_League_PHASE_1"
+    },
+    {
+      "id": "_pubgeu2",
+      "date": "2019 10 JUL - 17 JUL",
+      "game": "PUBG",
+      "championship": "PUBG Europe League PHASE 2",
+      "link": "https://liquipedia.net/pubg/PUBG_Europe_League_PHASE_2"
+    },
+    {
+      "id": "_pubgeu2019p3",
+      "date": "2019 20 JUL - 27 JUL",
+      "game": "PUBG",
+      "championship": "PUBG Europe League 2019 - Phase 3",
+      "link": "https://liquipedia.net/pubg/PUBG_Europe_League_2019_-_Phase_3"
+    },
+    {
+      "id": "_weplaymadmoon",
+      "date": "2019 20 JUL - 22 JUL",
+      "game": "DOTA2",
+      "championship": "WePlay! Mad Moon",
+      "link": "https://liquipedia.net/dota2/WePlay!_Mad_Moon"
+    },
+    {
+      "id": "_weplaybukovelminor",
+      "date": "2019 03 AUG - 05 AUG",
+      "game": "DOTA2",
+      "championship": "WePlay! Bukovel Minor",
+      "link": "https://liquipedia.net/dota2/WePlay!_Bukovel_Minor"
+    },
+    {
+      "id": "_americasminor2019",
+      "date": "2019 10 AUG - 12 AUG",
+      "game": "CS:GO",
+      "championship": "Americas Minor – StarLadder Major 2019",
+      "link": "https://liquipedia.net/counterstrike/Americas_Minor_–_StarLadder_Major_2019"
+    },
+    {
+      "id": "_pgsberlinpubg",
+      "date": "2019 04 AUG - 10 AUG",
+      "game": "PUBG",
+      "championship": "PGS Berlin Europe",
+      "link": "https://liquipedia.net/pubg/PGS_Berlin_Europe"
+    },
+    {
+      "id": "_pubgglobalcis",
+      "date": "2019 12 AUG - 18 AUG",
+      "game": "PUBG",
+      "championship": "PUBG Global Invitational CIS",
+      "link": "https://liquipedia.net/pubg/PUBG_Global_Invitational_CIS"
+    },
+    {
+      "id": "_weplayanimajor",
+      "date": "2019 10 AUG - 12 AUG",
+      "game": "DOTA2",
+      "championship": "WePlay AniMajor",
+      "link": "https://liquipedia.net/dota2/WePlay_AniMajor"
+    },
+    {
+      "id": "_redbullriverrunes2019",
+      "date": "2019 01 SEP - 03 SEP",
+      "game": "DOTA2",
+      "championship": "Red Bull River Runes 2019",
+      "link": "https://liquipedia.net/dota2/Red_Bull_River_Runes_2019"
+    },
+    {
+      "id": "_stladimbatvminor3",
+      "date": "2019 05 SEP - 07 SEP",
+      "game": "DOTA2",
+      "championship": "StarLadder ImbaTV Dota 2 Minor Season 3",
+      "link": "https://liquipedia.net/dota2/StarLadder_ImbaTV_Dota_2_Minor/Season_3"
+    },
+    {
+      "id": "_chongqingmajor",
+      "date": "2019 06 OCT - 13 OCT",
+      "game": "DOTA2",
+      "championship": "The Chongqing Major",
+      "link": "https://liquipedia.net/dota2/The_Chongqing_Major"
+    },
+    {
+      "id": "_ggbetd2inv",
+      "date": "2019 10 NOV - 12 NOV",
+      "game": "DOTA2",
+      "championship": "GG.Bet Dota 2 Invitational",
+      "link": "https://liquipedia.net/dota2/GG.Bet_Dota_2_Invitational"
+    },
+    {
+      "id": "_wesg2018_2019",
+      "date": "2019 02 DEC - 08 DEC",
+      "game": "DOTA2",
+      "championship": "WESG 2018-2019",
+      "link": "https://liquipedia.net/dota2/WESG_2018-2019"
+    },
+    {
+      "id": "_opportk2019",
+      "date": "2019 05 MAY - 08 MAY",
+      "game": "PUBG",
+      "championship": "OPPO R.T.K. Series 2019",
+      "link": "https://liquipedia.net/pubg/OPPO_R.T.K._Series_2019"
+    },
+    {
+      "id": "_weplaypushka",
+      "date": "2019 01 JUL - 04 JUL",
+      "game": "DOTA2",
+      "championship": "WePlay! Pushka League",
+      "link": "https://liquipedia.net/dota2/WePlay!_Pushka_League"
+    },
+    {
+      "id": "_pubgeu1",
+      "date": "2019 03 JUL - 10 JUL",
+      "game": "PUBG",
+      "championship": "PUBG Europe League PHASE 1",
+      "link": "https://liquipedia.net/pubg/PUBG_Europe_League_PHASE_1"
+    },
+    {
+      "id": "_pubgeu2",
+      "date": "2019 10 JUL - 17 JUL",
+      "game": "PUBG",
+      "championship": "PUBG Europe League PHASE 2",
+      "link": "https://liquipedia.net/pubg/PUBG_Europe_League_PHASE_2"
+    },
+    {
+      "id": "_pubgeu2019p3",
+      "date": "2019 20 JUL - 27 JUL",
+      "game": "PUBG",
+      "championship": "PUBG Europe League 2019 - Phase 3",
+      "link": "https://liquipedia.net/pubg/PUBG_Europe_League_2019_-_Phase_3"
+    },
+    {
+      "id": "_weplaymadmoon",
+      "date": "2019 20 JUL - 22 JUL",
+      "game": "DOTA2",
+      "championship": "WePlay! Mad Moon",
+      "link": "https://liquipedia.net/dota2/WePlay!_Mad_Moon"
+    },
+    {
+      "id": "_weplaybukovelminor",
+      "date": "2019 03 AUG - 05 AUG",
+      "game": "DOTA2",
+      "championship": "WePlay! Bukovel Minor",
+      "link": "https://liquipedia.net/dota2/WePlay!_Bukovel_Minor"
+    },
+    {
+      "id": "_americasminor2019",
+      "date": "2019 10 AUG - 12 AUG",
+      "game": "CS:GO",
+      "championship": "Americas Minor – StarLadder Major 2019",
+      "link": "https://liquipedia.net/counterstrike/Americas_Minor_–_StarLadder_Major_2019"
+    },
+    {
+      "id": "_pgsberlinpubg",
+      "date": "2019 04 AUG - 10 AUG",
+      "game": "PUBG",
+      "championship": "PGS Berlin Europe",
+      "link": "https://liquipedia.net/pubg/PGS_Berlin_Europe"
+    },
+    {
+      "id": "_pubgglobalcis",
+      "date": "2019 12 AUG - 18 AUG",
+      "game": "PUBG",
+      "championship": "PUBG Global Invitational CIS",
+      "link": "https://liquipedia.net/pubg/PUBG_Global_Invitational_CIS"
+    },
+    {
+      "id": "_weplayanimajor",
+      "date": "2019 10 AUG - 12 AUG",
+      "game": "DOTA2",
+      "championship": "WePlay AniMajor",
+      "link": "https://liquipedia.net/dota2/WePlay_AniMajor"
+    },
+    {
+      "id": "_redbullriverrunes2019",
+      "date": "2019 01 SEP - 03 SEP",
+      "game": "DOTA2",
+      "championship": "Red Bull River Runes 2019",
+      "link": "https://liquipedia.net/dota2/Red_Bull_River_Runes_2019"
+    },
+    {
+      "id": "_stladimbatvminor3",
+      "date": "2019 05 SEP - 07 SEP",
+      "game": "DOTA2",
+      "championship": "StarLadder ImbaTV Dota 2 Minor Season 3",
+      "link": "https://liquipedia.net/dota2/StarLadder_ImbaTV_Dota_2_Minor/Season_3"
+    },
+    {
+      "id": "_chongqingmajor",
+      "date": "2019 06 OCT - 13 OCT",
+      "game": "DOTA2",
+      "championship": "The Chongqing Major",
+      "link": "https://liquipedia.net/dota2/The_Chongqing_Major"
+    },
+    {
+      "id": "_ggbetd2inv",
+      "date": "2019 10 NOV - 12 NOV",
+      "game": "DOTA2",
+      "championship": "GG.Bet Dota 2 Invitational",
+      "link": "https://liquipedia.net/dota2/GG.Bet_Dota_2_Invitational"
+    },
+    {
+      "id": "_wesg2018_2019",
+      "date": "2019 02 DEC - 08 DEC",
+      "game": "DOTA2",
+      "championship": "WESG 2018-2019",
+      "link": "https://liquipedia.net/dota2/WESG_2018-2019"
+    },
+    {
+      "id": "_opportk2019",
+      "date": "2019 05 MAY - 08 MAY",
+      "game": "PUBG",
+      "championship": "OPPO R.T.K. Series 2019",
+      "link": "https://liquipedia.net/pubg/OPPO_R.T.K._Series_2019"
+    },
+    {
+      "id": "_weplaypushka",
+      "date": "2019 01 JUL - 04 JUL",
+      "game": "DOTA2",
+      "championship": "WePlay! Pushka League",
+      "link": "https://liquipedia.net/dota2/WePlay!_Pushka_League"
+    },
+    {
+      "id": "_pubgeu1",
+      "date": "2019 03 JUL - 10 JUL",
+      "game": "PUBG",
+      "championship": "PUBG Europe League PHASE 1",
+      "link": "https://liquipedia.net/pubg/PUBG_Europe_League_PHASE_1"
+    },
+    {
+      "id": "_pubgeu2",
+      "date": "2019 10 JUL - 17 JUL",
+      "game": "PUBG",
+      "championship": "PUBG Europe League PHASE 2",
+      "link": "https://liquipedia.net/pubg/PUBG_Europe_League_PHASE_2"
+    },
+    {
+      "id": "_pubgeu2019p3",
+      "date": "2019 20 JUL - 27 JUL",
+      "game": "PUBG",
+      "championship": "PUBG Europe League 2019 - Phase 3",
+      "link": "https://liquipedia.net/pubg/PUBG_Europe_League_2019_-_Phase_3"
+    },
+    {
+      "id": "_weplaymadmoon",
+      "date": "2019 20 JUL - 22 JUL",
+      "game": "DOTA2",
+      "championship": "WePlay! Mad Moon",
+      "link": "https://liquipedia.net/dota2/WePlay!_Mad_Moon"
+    },
+    {
+      "id": "_weplaybukovelminor",
+      "date": "2019 03 AUG - 05 AUG",
+      "game": "DOTA2",
+      "championship": "WePlay! Bukovel Minor",
+      "link": "https://liquipedia.net/dota2/WePlay!_Bukovel_Minor"
+    },
+    {
+      "id": "_americasminor2019",
+      "date": "2019 10 AUG - 12 AUG",
+      "game": "CS:GO",
+      "championship": "Americas Minor – StarLadder Major 2019",
+      "link": "https://liquipedia.net/counterstrike/Americas_Minor_–_StarLadder_Major_2019"
+    },
+    {
+      "id": "_pgsberlinpubg",
+      "date": "2019 04 AUG - 10 AUG",
+      "game": "PUBG",
+      "championship": "PGS Berlin Europe",
+      "link": "https://liquipedia.net/pubg/PGS_Berlin_Europe"
+    },
+    {
+      "id": "_pubgglobalcis",
+      "date": "2019 12 AUG - 18 AUG",
+      "game": "PUBG",
+      "championship": "PUBG Global Invitational CIS",
+      "link": "https://liquipedia.net/pubg/PUBG_Global_Invitational_CIS"
+    },
+    {
+      "id": "_weplayanimajor",
+      "date": "2019 10 AUG - 12 AUG",
+      "game": "DOTA2",
+      "championship": "WePlay AniMajor",
+      "link": "https://liquipedia.net/dota2/WePlay_AniMajor"
+    },
+    {
+      "id": "_redbullriverrunes2019",
+      "date": "2019 01 SEP - 03 SEP",
+      "game": "DOTA2",
+      "championship": "Red Bull River Runes 2019",
+      "link": "https://liquipedia.net/dota2/Red_Bull_River_Runes_2019"
+    },
+    {
+      "id": "_stladimbatvminor3",
+      "date": "2019 05 SEP - 07 SEP",
+      "game": "DOTA2",
+      "championship": "StarLadder ImbaTV Dota 2 Minor Season 3",
+      "link": "https://liquipedia.net/dota2/StarLadder_ImbaTV_Dota_2_Minor/Season_3"
+    },
+    {
+      "id": "_chongqingmajor",
+      "date": "2019 06 OCT - 13 OCT",
+      "game": "DOTA2",
+      "championship": "The Chongqing Major",
+      "link": "https://liquipedia.net/dota2/The_Chongqing_Major"
+    },
+    {
+      "id": "_ggbetd2inv",
+      "date": "2019 10 NOV - 12 NOV",
+      "game": "DOTA2",
+      "championship": "GG.Bet Dota 2 Invitational",
+      "link": "https://liquipedia.net/dota2/GG.Bet_Dota_2_Invitational"
+    },
+    {
+      "id": "_wesg2018_2019",
+      "date": "2019 02 DEC - 08 DEC",
+      "game": "DOTA2",
+      "championship": "WESG 2018-2019",
+      "link": "https://liquipedia.net/dota2/WESG_2018-2019"
+    },
+    {
+      "id": "_opportk2019",
+      "date": "2019 05 MAY - 08 MAY",
+      "game": "PUBG",
+      "championship": "OPPO R.T.K. Series 2019",
+      "link": "https://liquipedia.net/pubg/OPPO_R.T.K._Series_2019"
+    },
+    {
+      "id": "_weplaypushka",
+      "date": "2019 01 JUL - 04 JUL",
+      "game": "DOTA2",
+      "championship": "WePlay! Pushka League",
+      "link": "https://liquipedia.net/dota2/WePlay!_Pushka_League"
+    },
+    {
+      "id": "_pubgeu1",
+      "date": "2019 03 JUL - 10 JUL",
+      "game": "PUBG",
+      "championship": "PUBG Europe League PHASE 1",
+      "link": "https://liquipedia.net/pubg/PUBG_Europe_League_PHASE_1"
+    },
+    {
+      "id": "_pubgeu2",
+      "date": "2019 10 JUL - 17 JUL",
+      "game": "PUBG",
+      "championship": "PUBG Europe League PHASE 2",
+      "link": "https://liquipedia.net/pubg/PUBG_Europe_League_PHASE_2"
+    },
+    {
+      "id": "_pubgeu2019p3",
+      "date": "2019 20 JUL - 27 JUL",
+      "game": "PUBG",
+      "championship": "PUBG Europe League 2019 - Phase 3",
+      "link": "https://liquipedia.net/pubg/PUBG_Europe_League_2019_-_Phase_3"
+    },
+    {
+      "id": "_weplaymadmoon",
+      "date": "2019 20 JUL - 22 JUL",
+      "game": "DOTA2",
+      "championship": "WePlay! Mad Moon",
+      "link": "https://liquipedia.net/dota2/WePlay!_Mad_Moon"
+    },
+    {
+      "id": "_weplaybukovelminor",
+      "date": "2019 03 AUG - 05 AUG",
+      "game": "DOTA2",
+      "championship": "WePlay! Bukovel Minor",
+      "link": "https://liquipedia.net/dota2/WePlay!_Bukovel_Minor"
+    },
+    {
+      "id": "_americasminor2019",
+      "date": "2019 10 AUG - 12 AUG",
+      "game": "CS:GO",
+      "championship": "Americas Minor – StarLadder Major 2019",
+      "link": "https://liquipedia.net/counterstrike/Americas_Minor_–_StarLadder_Major_2019"
+    },
+    {
+      "id": "_pgsberlinpubg",
+      "date": "2019 04 AUG - 10 AUG",
+      "game": "PUBG",
+      "championship": "PGS Berlin Europe",
+      "link": "https://liquipedia.net/pubg/PGS_Berlin_Europe"
+    },
+    {
+      "id": "_pubgglobalcis",
+      "date": "2019 12 AUG - 18 AUG",
+      "game": "PUBG",
+      "championship": "PUBG Global Invitational CIS",
+      "link": "https://liquipedia.net/pubg/PUBG_Global_Invitational_CIS"
+    },
+    {
+      "id": "_weplayanimajor",
+      "date": "2019 10 AUG - 12 AUG",
+      "game": "DOTA2",
+      "championship": "WePlay AniMajor",
+      "link": "https://liquipedia.net/dota2/WePlay_AniMajor"
+    },
+    {
+      "id": "_redbullriverrunes2019",
+      "date": "2019 01 SEP - 03 SEP",
+      "game": "DOTA2",
+      "championship": "Red Bull River Runes 2019",
+      "link": "https://liquipedia.net/dota2/Red_Bull_River_Runes_2019"
+    },
+    {
+      "id": "_stladimbatvminor3",
+      "date": "2019 05 SEP - 07 SEP",
+      "game": "DOTA2",
+      "championship": "StarLadder ImbaTV Dota 2 Minor Season 3",
+      "link": "https://liquipedia.net/dota2/StarLadder_ImbaTV_Dota_2_Minor/Season_3"
+    },
+    {
+      "id": "_chongqingmajor",
+      "date": "2019 06 OCT - 13 OCT",
+      "game": "DOTA2",
+      "championship": "The Chongqing Major",
+      "link": "https://liquipedia.net/dota2/The_Chongqing_Major"
+    },
+    {
+      "id": "_ggbetd2inv",
+      "date": "2019 10 NOV - 12 NOV",
+      "game": "DOTA2",
+      "championship": "GG.Bet Dota 2 Invitational",
+      "link": "https://liquipedia.net/dota2/GG.Bet_Dota_2_Invitational"
+    },
+    {
+      "id": "_wesg2018_2019",
+      "date": "2019 02 DEC - 08 DEC",
+      "game": "DOTA2",
+      "championship": "WESG 2018-2019",
+      "link": "https://liquipedia.net/dota2/WESG_2018-2019"
+    },
+    {
+      "id": "_opportk2019",
+      "date": "2019 05 MAY - 08 MAY",
+      "game": "PUBG",
+      "championship": "OPPO R.T.K. Series 2019",
+      "link": "https://liquipedia.net/pubg/OPPO_R.T.K._Series_2019"
+    },
+    {
+      "id": "_weplaypushka",
+      "date": "2019 01 JUL - 04 JUL",
+      "game": "DOTA2",
+      "championship": "WePlay! Pushka League",
+      "link": "https://liquipedia.net/dota2/WePlay!_Pushka_League"
+    },
+    {
+      "id": "_pubgeu1",
+      "date": "2019 03 JUL - 10 JUL",
+      "game": "PUBG",
+      "championship": "PUBG Europe League PHASE 1",
+      "link": "https://liquipedia.net/pubg/PUBG_Europe_League_PHASE_1"
+    },
+    {
+      "id": "_pubgeu2",
+      "date": "2019 10 JUL - 17 JUL",
+      "game": "PUBG",
+      "championship": "PUBG Europe League PHASE 2",
+      "link": "https://liquipedia.net/pubg/PUBG_Europe_League_PHASE_2"
+    },
+    {
+      "id": "_pubgeu2019p3",
+      "date": "2019 20 JUL - 27 JUL",
+      "game": "PUBG",
+      "championship": "PUBG Europe League 2019 - Phase 3",
+      "link": "https://liquipedia.net/pubg/PUBG_Europe_League_2019_-_Phase_3"
+    },
+    {
+      "id": "_weplaymadmoon",
+      "date": "2019 20 JUL - 22 JUL",
+      "game": "DOTA2",
+      "championship": "WePlay! Mad Moon",
+      "link": "https://liquipedia.net/dota2/WePlay!_Mad_Moon"
+    },
+    {
+      "id": "_weplaybukovelminor",
+      "date": "2019 03 AUG - 05 AUG",
+      "game": "DOTA2",
+      "championship": "WePlay! Bukovel Minor",
+      "link": "https://liquipedia.net/dota2/WePlay!_Bukovel_Minor"
+    },
+    {
+      "id": "_opportk2019",
+      "date": "2019 05 MAY - 08 MAY",
+      "game": "PUBG",
+      "championship": "OPPO R.T.K. Series 2019",
+      "link": "https://liquipedia.net/pubg/OPPO_R.T.K._Series_2019"
+    },
+    {
+      "id": "_weplaypushka",
+      "date": "2019 01 JUL - 04 JUL",
+      "game": "DOTA2",
+      "championship": "WePlay! Pushka League",
+      "link": "https://liquipedia.net/dota2/WePlay!_Pushka_League"
+    },
+    {
+      "id": "_pubgeu1",
+      "date": "2019 03 JUL - 10 JUL",
+      "game": "PUBG",
+      "championship": "PUBG Europe League PHASE 1",
+      "link": "https://liquipedia.net/pubg/PUBG_Europe_League_PHASE_1"
+    },
+    {
+      "id": "_pubgeu2",
+      "date": "2019 10 JUL - 17 JUL",
+      "game": "PUBG",
+      "championship": "PUBG Europe League PHASE 2",
+      "link": "https://liquipedia.net/pubg/PUBG_Europe_League_PHASE_2"
+    },
+    {
+      "id": "_pubgeu2019p3",
+      "date": "2019 20 JUL - 27 JUL",
+      "game": "PUBG",
+      "championship": "PUBG Europe League 2019 - Phase 3",
+      "link": "https://liquipedia.net/pubg/PUBG_Europe_League_2019_-_Phase_3"
+    },
+    {
+      "id": "_weplaymadmoon",
+      "date": "2019 20 JUL - 22 JUL",
+      "game": "DOTA2",
+      "championship": "WePlay! Mad Moon",
+      "link": "https://liquipedia.net/dota2/WePlay!_Mad_Moon"
+    },
+    {
+      "id": "_weplaybukovelminor",
+      "date": "2019 03 AUG - 05 AUG",
+      "game": "DOTA2",
+      "championship": "WePlay! Bukovel Minor",
+      "link": "https://liquipedia.net/dota2/WePlay!_Bukovel_Minor"
+    },
+    {
+      "id": "_weplayinvitval",
+      "date": "2021 04 MAR - 06 MAR",
+      "game": "VALORANT",
+      "championship": "WePlay! Invitational VALORANT",
+      "link": "https://liquipedia.net/valorant/WePlay!_Invitational_VALORANT"
+    },
+    {
+      "id": "_wprlnorth",
+      "date": "2021 02 MAY - 03 MAY",
+      "game": "Rocket League",
+      "championship": "WePlay Rocket League Invitational North America",
+      "link": "https://liquipedia.net/rocketleague/WePlay_Rocket_League_Invitational_North_America"
+    },
+    {
+      "id": "_wprlemea",
+      "date": "2021 02 MAY - 03 MAY",
+      "game": "Rocket League",
+      "championship": "WePlay Rocket League Invitational EMEA",
+      "link": "https://liquipedia.net/rocketleague/WePlay_Rocket_League_Invitational_EMEA"
+    },
+    {
+      "id": "_weplayuflmk",
+      "date": "2021 06 JUN - 06 JUN",
+      "game": "Fighting Games",
+      "championship": "WePlay Ultimate Fighting League MK",
+      "link": "https://liquipedia.net/fightinggames/WePlay_Ultimate_Fighting_League_MK"
+    },
+    {
+      "id": "_blastpremworldfinal2021",
+      "date": "2021 06 NOV - 13 NOV",
+      "game": "CS:GO",
+      "championship": "BLAST Premier World Final 2021",
+      "link": "https://liquipedia.net/counterstrike/BLAST_Premier_World_Final_2021"
+    },
+    {
+      "id": "_weplayclutchisland",
+      "date": "2021 03 JUL - 05 JUL",
+      "game": "CS:GO",
+      "championship": "WePlay! Clutch Island",
+      "link": "https://liquipedia.net/counterstrike/WePlay!_Clutch_Island"
+    },
+    {
+      "id": "_weplayuflsc6",
+      "date": "2021 07 JUL - 07 JUL",
+      "game": "Fighting Games",
+      "championship": "WePlay Ultimate Fighting League SC6",
+      "link": "https://liquipedia.net/fightinggames/WePlay_Ultimate_Fighting_League_SC6"
+    },
+    {
+      "id": "_weplayufltekken",
+      "date": "2021 08 AUG - 08 AUG",
+      "game": "Fighting Games",
+      "championship": "WePlay Ultimate Fighting League Tekken",
+      "link": "https://liquipedia.net/tekken/WePlay_Ultimate_Fighting_League_Tekken"
+    },
+    {
+      "id": "_ti10",
+      "date": "2021 10 AUG - 17 AUG",
+      "game": "DOTA2",
+      "championship": "The International 10",
+      "link": "https://liquipedia.net/dota2/The_International_10"
+    },
+    {
+      "id": "_ultimateweekendbrawl1",
+      "date": "2021 01 SEP - 01 SEP",
+      "game": "Fighting Games",
+      "championship": "Ultimate Weekend Brawl #1",
+      "link": "https://liquipedia.net/fightinggames/Ultimate_Weekend_Brawl_1"
+    },
+    {
+      "id": "_weplayacademy",
+      "date": "2021 01 SEP - 10 SEP",
+      "game": "CS:GO",
+      "championship": "WePlay Academy League",
+      "link": "https://liquipedia.net/counterstrike/WePlay_Academy_League"
+    },
+    {
+      "id": "_weplaydragontemple",
+      "date": "2020 11 DEC - 13 DEC",
+      "game": "Fighting Games",
+      "championship": "WePlay Dragon Temple",
+      "link": "https://liquipedia.net/fighters/Dragon_Temple/2020"
+    },
+    {
+      "id": "_summonerswarsmulticast",
+      "date": "TBD",
+      "game": "Mobile",
+      "championship": "summoners wars: multicast",
+      "link": "https://liquipedia.net/mobile/Summoners_Wars:_Multicast"
+    },
+    {
+      "id": "_crossfire2024",
+      "date": "2024 01 FEB - 28 FEB",
+      "game": "CrossFire",
+      "championship": "CrossFire West League 2024 Season 1",
+      "link": "https://liquipedia.net/crossfire/CrossFire_West_League_2024_Season_1"
+    },
+    {
+      "id": "_hokopens2024",
+      "date": "2024 01 MAR - 31 MAR",
+      "game": "Honor of Kings",
+      "championship": "HoK Open Series 2024",
+      "link": "https://liquipedia.net/honorofkings/HoK_Open_Series_2024"
+    }
+  ]
+  
