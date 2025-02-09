@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const pageContent = document.querySelector(".page-content");
 
   if (transitionOverlay && transitionVideo && iframeContainer && pageContent) {
-    const CUT_POINT = 0.7;
+    const CUT_POINT = 0.5;
     let pendingUrl = null;
     let cutDone = false;
 
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         iframeContainer.style.display = "block";
         iframeContainer.innerHTML = `
           <iframe src="${pendingUrl}" 
-                  style="border:none; width:100%; height:100%;">
+                  style="border:none; width:100%; height:100%; background-color: #1a1a1a;">
           </iframe>
         `;
       }
