@@ -1,0 +1,132 @@
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Глобальные стили для html и body */
+html, body {
+  font-family: sans-serif;
+  background-color: #1a1a1a;  /* Тёмный фон */
+  overflow-y: scroll;
+  -ms-overflow-style: none;   /* Для IE и Edge */
+  scrollbar-width: none;      /* Для Firefox */
+}
+
+::-webkit-scrollbar {
+  display: none;              /* Для Chrome, Safari, Opera */
+}
+
+/* Определяем переменные (аналогичные tools.css) */
+:root {
+  --glass-bg: rgba(26, 26, 26, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --box-shadow-color: rgba(0, 0, 0, 0.3);
+  --accent-color: #e21818;
+  --transition-speed: 0.3s;
+  --card-hover-scale: 1.06;
+}
+
+/* Контейнер основной страницы (при необходимости можно добавить стили) */
+.page-content {
+  /* Можно добавить отступы или другие стили по желанию */
+}
+
+/* Контейнер live_page */
+.live_page {
+  position: relative;
+  width: 1920px;
+  height: 907px;
+  background: transparent;
+  margin: 0 auto;
+}
+
+/* Фон страницы */
+.bg_live {
+  position: absolute;
+  width: 1920px;
+  height: 911px;
+  left: 0;
+  top: 0;
+  background: url('assets/bg_live.png') no-repeat center/cover;
+}
+
+/* Текстовые блоки */
+.live_text {
+  position: absolute;
+  font-family: 'Anybody Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 33.26px;
+  line-height: 34px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #E7E4D4;
+}
+.live_text1 {
+  width: 1414px;
+  height: 34.14px;
+  left: calc(50% - 1414px/2 + 55px);
+  top: 791px;
+}
+.live_text2 {
+  width: 1414px;
+  height: 33.14px;
+  left: calc(50% - 1414px/2 + 55px);
+  top: 825.14px;
+}
+
+/* Стилизация кнопки (#live_button) в стиле карточек из tools.css */
+#live_button {
+  position: absolute;
+  width: 435px;
+  height: 166px;
+  left: calc(50% - 392px/2);
+  top: calc(50% - 166px/2 + 0.5px);
+  background: url('assets/live_button.png') no-repeat center/contain;
+  border: 2px solid var(--glass-border);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px var(--box-shadow-color);
+  transition: transform var(--transition-speed) ease,
+              border-color var(--transition-speed) ease,
+              box-shadow var(--transition-speed) ease;
+  z-index: 10;
+}
+#live_button:hover {
+  transform: scale(var(--card-hover-scale));
+  border-color: var(--accent-color);
+  box-shadow: 0 8px 32px rgba(255, 0, 0, 0.5);
+}
+
+/* Стиль для транзишн-оверлея */
+#transitionOverlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Стиль для видео транзишна */
+.transition-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: transparent;
+}
+
+/* Стили для контейнера iframe */
+#iframeContainer {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #1a1a1a;
+}

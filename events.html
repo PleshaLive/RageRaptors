@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Подключаем внешний CSS-файл -->
   <link rel="stylesheet" href="events.css">
+  <link rel="stylesheet" href="footer.css">
   <!-- Скрипт для транзишна и прочих переходов -->
   <script defer src="script.js"></script>
 </head>
+
 <body>
   <!-- Альфа-транзишн (опционально) -->
   <div id="transitionOverlay">
@@ -16,8 +18,8 @@
       id="transitionVideo"
       class="transition-video"
       muted
-      src="assets/transition-alpha.webm"
-    ></video>
+      src="assets/transition-alpha.webm">
+    </video>
   </div>
 
   <!-- Контейнер для iframe (если нужен) -->
@@ -67,6 +69,9 @@
   <button id="scrollToTopBtn" title="Вверх">
     <img src="images/up-arrow.png" alt="Вверх">
   </button>
+
+  <!-- Аудио элемент для звукового эффекта при наведении -->
+  <audio id="hoverSound" src="assets/hover-sound.wav"></audio>
 
   <!-- JSON-данные турниров -->
   <script id="tournaments-json" type="application/json">
@@ -809,7 +814,7 @@
     ]
       </script>
 
-  <!-- Скрипт для генерации блоков турниров -->
+  <!-- Скрипт для генерации блоков турниров с звуковым эффектом при наведении -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const container = document.querySelector('.tournaments-container');
@@ -829,8 +834,14 @@
           <a href="${t.link}" target="_blank">LINK</a>
         </div>
       `;
-      return block;
-    }
+      // При наведении воспроизводим звуковой эффект
+      block.addEventListener('mouseenter', () => {
+    const hoverSound = new Audio('assets/hover-sound.wav');
+    hoverSound.volume = 0.27;  // уменьшение громкости примерно на 51%
+    hoverSound.play().catch(err => console.error(err));
+  });
+  return block;
+}
 
     function renderTournaments(container, arr) {
       container.innerHTML = '';
@@ -863,5 +874,47 @@
 
   <!-- Дополнительный скрипт (если требуется) -->
   <script src="script.js"></script>
+  
+  <footer class="footer">
+    <!-- Фоновый прямоугольник -->
+    <div class="footer-rectangle"></div>
+  
+    <!-- Заголовки групп ссылок -->
+    <div class="footer-pages-header">PAGES</div>
+    <div class="footer-social-header">SOCIAL</div>
+    <div class="footer-contact-header">CONTACT</div>
+  
+    <!-- Ссылки группы PAGES -->
+    <a href="tools.html" class="footer-tools">tools</a>
+    <a href="services.html" class="footer-services">services</a>
+    <a href="about.html" class="footer-about">about</a>
+    <a href="events.html" class="footer-events">events</a>
+  
+    <!-- Ссылки группы SOCIAL -->
+    <a href="twitter.html" class="footer-twitter">x (twitter)</a>
+    <a href="instagram.html" class="footer-instagram">instagram</a>
+    <a href="threads.html" class="footer-threads">threads</a>
+    <a href="tiktok.html" class="footer-tiktok">tik-tok</a>
+  
+    <!-- Контактные данные -->
+    <div class="footer-email">rr.studio@gmail.com</div>
+    <div class="footer-phone">+38 073 566 30 50</div>
+  
+    <!-- Описание -->
+    <div class="footer-description">
+      Rage Raptors - predators in the world of live broadcasting.<br>
+      Energy that cannot be tamed.<br>
+      We merge creativity and technology power to craft live moments that captivate and inspire.
+    </div>
+  
+    <!-- Логотип -->
+    <div class="footer-logo"></div>
+  
+    <!-- Копирайт -->
+    <div class="footer-copyright">
+      © rage raptors, 2022.
+    </div>
+  </footer>
+
 </body>
 </html>

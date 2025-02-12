@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Page</title>
+  <link rel="stylesheet" href="live_page.css">
+  <!-- Подключаем основной скрипт переходов -->
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Transition overlay с видео -->
+  <div id="transitionOverlay">
+    <video 
+      id="transitionVideo"
+      class="transition-video"
+      muted
+      playsinline
+      preload="auto"
+      src="assets/transition-alpha.webm">
+    </video>
+  </div>
+
+  <!-- Контейнер для iframe, который подменяет содержимое (скрыт по умолчанию) -->
+  <div id="iframeContainer"></div>
+
+  <!-- Основное содержимое страницы -->
+  <div class="page-content">
+    <div class="live_page">
+      <!-- Фоновое изображение -->
+      <div class="bg_live"></div>
+
+      <!-- Текстовые блоки -->
+      <div class="live_text live_text1">
+        Rage Raptors - predators in the world of live broadcasting. Energy that cannot be tamed.
+      </div>
+      <div class="live_text live_text2">
+        We merge creativity and technology power to craft live moments that captivate and inspire.
+      </div>
+
+      <!-- Кнопка перехода в виде ссылки с классом nav-link -->
+      <a href="events.html" class="nav-link">
+        <div id="live_button"></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Кнопка "Прокрутить вверх" (если требуется) -->
+  <button id="scrollToTopBtn" onclick="scrollToTop()">Наверх</button>
+</body>
+</html>

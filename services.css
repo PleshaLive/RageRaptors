@@ -287,14 +287,14 @@ html, body {
   height: 854px;
 }
 .pricing-card h2 {
-  font-size: 18px;
+  font-size: 27px;
   color: var(--light-text);
-  margin: 15px 0;
+  margin: -15px 0;
 }
 .pricing-card .price {
-  font-size: 28px;
+  font-size: 30px;
   color: var(--accent-color);
-  margin: 10px 0;
+  margin: 15px 0;
 }
 .pricing-card .per-day {
   font-size: 16px;
@@ -304,6 +304,7 @@ html, body {
   font-size: 14px;
   margin-bottom: 15px;
   color: var(--muted-text);
+  text-align: left;
 }
 .pricing-card ul {
   list-style: none;
@@ -327,7 +328,7 @@ html, body {
 }
 .pricing-card .btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px 40px;
   background: var(--accent-color);
   color: var(--light-text);
   text-decoration: none;
@@ -371,7 +372,7 @@ html, body {
   padding: 5px 10px;
   font-size: 12px;
   border-radius: 4px;
-  box-shadow: 0 0 8px rgba(226, 88, 24, 0.7);
+  box-shadow: 0 0 4px rgba(226, 88, 24, 0.7);
 }
 
 /* Compare Plans таблица */
@@ -519,4 +520,331 @@ html, body {
   border-radius: 5px;
   box-shadow: 0 0 2px rgb(179, 112, 35), inset 0 0 2px rgb(223, 110, 45);
   transition: 0.3s;
+}
+
+/* Общий контейнер футера *//* Общий контейнер футера *//* Общий контейнер футера *//* Общий контейнер футера *//* Общий контейнер футера */
+.footer {
+  position: relative;
+  width: 1920px;
+  height: 420px;
+}
+
+.footer a.footer-twitter:hover,
+.footer a.footer-tools:hover,
+.footer a.footer-instagram:hover,
+.footer a.footer-services:hover,
+.footer a.footer-threads:hover,
+.footer a.footer-about:hover,
+.footer a.footer-tiktok:hover,
+.footer a.footer-events:hover {
+  color: #DC5C33;
+  text-decoration: underline;
+  text-shadow: 0 0 1px #DC5C33;
+}
+
+/* Фоновый прямоугольник (Rectangle 645) */
+.footer .footer-rectangle {
+  box-sizing: border-box;
+  position: absolute;
+  width: 1921px;
+  height: 470px;
+  left: -1px;
+  top: 50px;
+  background: #1D2C1E;
+  border-top: 5px solid #DC5C33;
+}
+
+/* Заголовки групп ссылок */
+
+/* PAGES */
+.footer .footer-pages-header {
+  position: absolute;
+  width: 247px;
+  height: 70px;
+  left: 684px;
+  top: 103px;
+  font-family: 'Anybody Expanded';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  color: #DC5C33;
+}
+
+/* SOCIAL */
+.footer .footer-social-header {
+  position: absolute;
+  width: 261px;
+  height: 70px;
+  left: 1001px;
+  top: 103px;
+  font-family: 'Anybody Expanded';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  color: #DC5C33;
+}
+
+/* CONTACT */
+.footer .footer-contact-header {
+  position: absolute;
+  width: 285px;
+  height: 70px;
+  left: 1308px;
+  top: 103px;
+  font-family: 'Anybody Expanded';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  color: #DC5C33;
+}
+
+/* Ссылки – группа SOCIAL и PAGES */
+
+/* X (twitter) */
+.footer a.footer-twitter {
+  position: absolute;
+  width: 142px;
+  height: 42px;
+  left: 1009px;
+  top: 200px;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  text-transform: lowercase;
+  color: #E7E4D4;
+  text-decoration: none;
+}
+
+/* tools */
+.footer a.footer-tools {
+  position: absolute;
+  width: 117px;
+  height: 42px;
+  left: 690px;
+  top: 200px;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  text-transform: lowercase;
+  color: #E7E4D4;
+  text-decoration: none;
+}
+
+/* Instagram */
+.footer a.footer-instagram {
+  position: absolute;
+  width: 142px;
+  height: 42px;
+  left: 1009px;
+  top: 251px;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  text-transform: lowercase;
+  color: #E7E4D4;
+  text-decoration: none;
+}
+
+/* services */
+.footer a.footer-services {
+  position: absolute;
+  width: 117px;
+  height: 42px;
+  left: 690px;
+  top: 251px;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  text-transform: lowercase;
+  color: #E7E4D4;
+  text-decoration: none;
+}
+
+/* threads */
+.footer a.footer-threads {
+  position: absolute;
+  width: 142px;
+  height: 41px;
+  left: 1009px;
+  top: 302px;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  text-transform: lowercase;
+  color: #E7E4D4;
+  text-decoration: none;
+}
+
+/* about */
+.footer a.footer-about {
+  position: absolute;
+  width: 117px;
+  height: 41px;
+  left: 690px;
+  top: 302px;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  text-transform: lowercase;
+  color: #E7E4D4;
+  text-decoration: none;
+}
+
+/* Tik-tok */
+.footer a.footer-tiktok {
+  position: absolute;
+  width: 142px;
+  height: 42px;
+  left: 1009px;
+  top: 352px;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  text-transform: lowercase;
+  color: #E7E4D4;
+  text-decoration: none;
+}
+
+/* events */
+.footer a.footer-events {
+  position: absolute;
+  width: 117px;
+  height: 42px;
+  left: 690px;
+  top: 352px;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  text-transform: lowercase;
+  color: #E7E4D4;
+  text-decoration: none;
+}
+
+/* Контактные данные */
+
+/* Email */
+.footer .footer-email {
+  position: absolute;
+  width: 230px;
+  height: 41px;
+  left: 1308px;
+  top: 200px;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24.4706px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  text-transform: lowercase;
+  color: #E7E4D4;
+}
+
+/* Телефон */
+.footer .footer-phone {
+  position: absolute;
+  width: 230px;
+  height: 42px;
+  left: 1308px;
+  top: 249px;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  text-transform: lowercase;
+  color: #E7E4D4;
+}
+
+/* Описание */
+.footer .footer-description {
+  position: absolute;
+  width: 334px;
+  height: 198.26px;
+  left: 197px;
+  top: 200px;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #E7E4D4;
+  letter-spacing: 0.4px; /* увеличивает промежуток между буквами */ 
+}
+
+/* Логотип */
+.footer .footer-logo {
+  position: absolute;
+  width: 412px;
+  height: 120px;
+  left: 165px;
+  top: 66px;
+  background: url('images/LOGO.png') no-repeat;
+  background-size: contain;
+}
+
+/* Копирайт */
+.footer .footer-copyright {
+  position: absolute;
+  width: 577px;
+  height: 41px;
+  left: 0px;
+  top: 470px;
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #E7E4D4;
 }

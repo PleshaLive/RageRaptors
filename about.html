@@ -4,23 +4,26 @@
   <meta charset="UTF-8">
   <title>Rage Page (Reduced)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Подключаем стили Rage.css -->
+  
+  <!-- Подключаем стили -->
   <link rel="stylesheet" href="about.css">
-
+  <link rel="stylesheet" href="footer.css">
+  
   <!-- Скрипт для плавного transition-overlay (если нужен) -->
   <script defer src="script.js"></script>
+  
+  <!-- Дополнительные стили: задаём минимальную высоту и отступ снизу для основного контента -->
+  <style>
+    .page-content {
+      min-height: 125vh;
+      margin-bottom: 420px;  /* Отступ равен высоте футера */
+    }
+  </style>
 </head>
 <body>
-
   <!-- Overlay для альфа-транзишна (опционально) -->
   <div id="transitionOverlay">
-    <video
-      id="transitionVideo"
-      class="transition-video"
-      muted
-      src="assets/transition-alpha.webm"
-    ></video>
+    <video id="transitionVideo" class="transition-video" muted src="assets/transition-alpha.webm"></video>
   </div>
 
   <!-- iframeContainer: для «подмены» страницы (опционально) -->
@@ -28,7 +31,6 @@
 
   <!-- Контейнер текущей страницы -->
   <div class="page-content">
-
     <!-- ЛОГО -->
     <div class="logo"></div>
 
@@ -40,22 +42,19 @@
           <video src="images/Product button.webm" loop muted autoplay playsinline></video>
         </div>
       </a>
-
       <!-- Кнопка Services -->
       <a href="services.html" class="nav-link">
         <div class="services-button">
           <video src="images/Services button.webm" loop muted autoplay playsinline></video>
         </div>
       </a>
-
       <!-- Кнопка About -->
       <a href="about.html" class="nav-link">
         <div class="about-button">
           <video src="images/About button.webm" loop muted autoplay playsinline></video>
         </div>
       </a>
-
-      <!-- Новая кнопка Events -->
+      <!-- Кнопка Events -->
       <a href="events.html" class="nav-link">
         <div class="events-button">
           <video src="images/Events button.webm" loop muted autoplay playsinline></video>
@@ -75,11 +74,9 @@
       for broadcasts of major events like WePlay Dota Animajor and most WePlay tournaments
       since 2020, I bring hands-on expertise gained throughout my career, including my
       years at Starladder, which concluded after directing the CS Major 2019.<br><br>
-
       This experience spans all aspects of production, from studio setup and directing
       to commentary and design, enabling me to deliver polished, audience-focused
       broadcasts.<br><br>
-      
       Whether for a high-stakes tournament, a collaborative fan stream,
       or any live event, I have the expertise and advanced gear to deliver advanced
       live broadcasts, including replays and all key features for an engaging experience.
@@ -89,14 +86,13 @@
 
     <!-- Всё, что идёт ПОСЛЕ первого текста -->
     <div class="after-text-content">
-
       <!-- Группы (если нужны для позиционирования) -->
       <div class="group-9"></div>
       <div class="group-8"></div>
       <div class="group-7"></div>
       <div class="group-6"></div>
 
-      <!-- Статистические блоки (frame-1171278329 и т.д.) -->
+      <!-- Статистические блоки -->
       <div class="frame-1171278329">
         <div class="stat-number">50+</div>
         <div class="stat-label">LAN EVENTS</div>
@@ -114,7 +110,7 @@
         <div class="stat-label">YEARS EXPERIENCE</div>
       </div>
 
-      <!-- Второй большой текст -->
+      <!-- Второй большой текст (big-text-block-2) -->
       <div class="big-text-block-2">
         I have been officially working in the eSports industry since 2014, starting out
         as a commentator for Point Blank and Counter-Strike. Over time, I expanded my skill
@@ -122,19 +118,16 @@
         experience, I’ve organized and produced numerous online and LAN tournaments, serving
         in a variety of roles—observer, sound engineer, director, operator, and producer.
         You could say I’ve worn nearly every hat in this field.<br><br>
-
         In my work, I’ve introduced several innovative features to eSports broadcasting and
         am now eager to share my own software solutions. Previously, I implemented custom
         texture changes in CS:GO; if you heard about the team gloves at the MLG Major, that
         was my project. I also integrated 3D models into the game using SFM and Unity,
         collaborating with the WePlay team to bring these ideas to life.<br><br>
-
         Unfortunately or fortunately, after the full-scale war began in Ukraine, the company
         I worked for had to disband its broadcast team. Motivated by my ambition and
         experience, I decided to build my own team and create my own tournaments, continuing
         to push the boundaries of eSports broadcasting.
       </div>
-
 
       <!-- Блок Founder -->
       <div class="founder">FOUNDER</div>
@@ -152,9 +145,47 @@
       <!-- Заголовок EVENTS I PARTICIPATED IN : + нижняя полоса -->
       <div class="events-i-participated">EVENTS I PARTICIPATED IN :</div>
       <div class="photo-t"></div>
+    </div><!-- /.after-text-content -->
+  </div><!-- /.page-content -->
 
-    </div> <!-- /.after-text-content -->
+  <!-- Футер (располагается после всего контента) -->
+  <footer class="footer">
+    <!-- Фоновый прямоугольник -->
+    <div class="footer-rectangle"></div>
 
-  </div><!-- .page-content -->
+    <!-- Заголовки групп ссылок -->
+    <div class="footer-pages-header">PAGES</div>
+    <div class="footer-social-header">SOCIAL</div>
+    <div class="footer-contact-header">CONTACT</div>
+
+    <!-- Ссылки – группа PAGES и SOCIAL -->
+    <a href="tools.html" class="footer-tools">tools</a>
+    <a href="events.html" class="footer-events">events</a>
+    <a href="about.html" class="footer-about">about</a>
+    <a href="services.html" class="footer-services">services</a>
+    <a href="twitter.html" class="footer-twitter">x (twitter)</a>
+    <a href="instagram.html" class="footer-instagram">instagram</a>
+    <a href="threads.html" class="footer-threads">threads</a>
+    <a href="tiktok.html" class="footer-tiktok">tik-tok</a>
+
+    <!-- Контактные данные -->
+    <div class="footer-email">rr.studio@gmail.com</div>
+    <div class="footer-phone">+38 073 566 30 50</div>
+
+    <!-- Описание -->
+    <div class="footer-description">
+      Rage Raptors - predators in the world of live broadcasting.<br>
+      Energy that cannot be tamed.<br>
+      We merge creativity and technology power to craft live moments that captivate and inspire.
+    </div>
+
+    <!-- Логотип -->
+    <div class="footer-logo"></div>
+
+    <!-- Копирайт -->
+    <div class="footer-copyright">
+      © rage raptors, 2022.
+    </div>
+  </footer>
 </body>
 </html>

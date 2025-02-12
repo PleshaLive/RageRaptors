@@ -12,6 +12,11 @@
   box-sizing: border-box;
 }
 
+/* Применяем скрытие горизонтального скролла только для html */
+html {
+  overflow-x: hidden;
+}
+
 html, body {
   width: 100%;
   min-height: 100%;
@@ -19,8 +24,6 @@ html, body {
   color: #B0B0B0;
   line-height: 1.6;
   scroll-behavior: smooth;
-  overflow-x: hidden;
-  overflow-y: auto;
   background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0) 0%,
@@ -328,4 +331,121 @@ html, body {
   border-radius: 5px;
   box-shadow: 0 0 2px rgb(179, 112, 35), inset 0 0 2px rgb(223, 110, 45);
   transition: 0.3s;
+}
+
+/* ======= Адаптивные стили ======= */
+
+/* Стили для мобильных устройств (макс. 768px) */
+@media screen and (max-width: 768px) {
+  .page-content {
+    padding: 10px;
+  }
+  
+  .logo1 {
+    margin-left: 20px;
+    width: 300px;
+    height: 150px;
+    background-size: contain;
+  }
+  
+  .nav-buttons {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .product-button,
+  .services-button,
+  .about-button,
+  .events-button {
+    position: relative;
+    width: 120px;
+    height: 50px;
+    background-size: contain;
+  }
+  
+  .events-heading {
+    margin-left: 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .tournament-block {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .tournament-block .date1,
+  .tournament-block .cs-go,
+  .tournament-block .championship,
+  .tournament-block .tournament-link {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  #scrollToTopBtn {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  #scrollToTopBtn img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Стили для планшетов (от 769px до 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .page-content {
+    padding: 15px;
+  }
+  
+  .logo1 {
+    margin-left: 30px;
+    width: 350px;
+    height: 170px;
+  }
+  
+  .nav-buttons {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .product-button,
+  .services-button,
+  .about-button,
+  .events-button {
+    position: relative;
+    width: 140px;
+    height: 60px;
+  }
+  
+  .events-heading {
+    margin-left: 30px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .tournament-block {
+    padding: 10px;
+  }
+  
+  .tournament-block .date1,
+  .tournament-block .cs-go,
+  .tournament-block .championship,
+  .tournament-block .tournament-link {
+    font-size: 15px;
+  }
 }

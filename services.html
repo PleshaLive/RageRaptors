@@ -8,6 +8,28 @@
   <link rel="stylesheet" href="services.css">
   <!-- Скрипт переходов, если нужно -->
   <script defer src="script.js"></script>
+  <style>
+    /* Пример простых стилей для иконок в прайсинг-карточках */
+    .plan-features li {
+      position: relative;
+      padding-left: 2em;
+      margin-bottom: 0.5em;
+    }
+    .plan-features li .icon-check {
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #DC5C33;
+      font-weight: bold;
+    }
+    .plan-features li .icon-plus {
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: #e4e3d7;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
@@ -61,7 +83,7 @@
       </div>
 
       <div class="pricing-container">
-        <!-- Free -->
+        <!-- CHILL (Free) -->
         <div class="pricing-card free">
           <div class="plan-image free-img"></div>
           <h2>CHILL</h2>
@@ -70,13 +92,19 @@
             A simple yet complete kit for hassle-free streaming with your provided graphics.
           </p>
           <ul class="plan-features">
-            <li>Setup</li>
-            <li>Live Broadcasting</li>
+            <li>
+              <span class="icon-check">✓</span> Setup 
+              <span class="icon-plus"></span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span> Live Broadcasting 
+              <span class="icon-plus"></span>
+            </li>
           </ul>
           <a href="#" class="btn">Get Started</a>
         </div>
 
-        <!-- Personal -->
+        <!-- BASIC (Personal) -->
         <div class="pricing-card personal">
           <div class="plan-image personal-img"></div>
           <h2>BASIC</h2>
@@ -85,15 +113,27 @@
             Obtain a solid base for top-tier live coverage and smoother streaming standards.
           </p>
           <ul class="plan-features">
-            <li>Setup</li>
-            <li>Live Broadcasting</li>
-            <li>Observing setup + observer</li>
-            <li>Instant Replays</li>
+            <li>
+              <span class="icon-check">✓</span> Setup 
+              <span class="icon-plus"></span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span> Live Broadcasting 
+              <span class="icon-plus"></span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span> Observing setup + observer 
+              <span class="icon-plus">+</span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span> Instant Replays 
+              <span class="icon-plus">+</span>
+            </li>
           </ul>
           <a href="#" class="btn">Get Started</a>
         </div>
-
-        <!-- Professional -->
+        
+        <!-- PRO (Professional) -->
         <div class="pricing-card professional">
           <div class="plan-image professional-img"></div>
           <h2>PRO</h2>
@@ -103,17 +143,35 @@
             Gain nearly all you need to present top-notch skill and polish on your broadcast.
           </p>
           <ul class="plan-features">
-            <li>Setup</li>
-            <li>Live Broadcasting</li>
-            <li>Observing setup + observer</li>
-            <li>Instant Replays</li>
-            <li>Server admin</li>
-            <li>Overlays</li>
+            <li>
+              <span class="icon-check">✓</span> Setup 
+              <span class="icon-plus"></span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span> Live Broadcasting 
+              <span class="icon-plus"></span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span> Observing setup + observer 
+              <span class="icon-plus"></span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span> Instant Replays 
+              <span class="icon-plus"></span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span> Server admin 
+              <span class="icon-plus">+</span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span> Overlays 
+              <span class="icon-plus">+</span>
+            </li>
           </ul>
           <a href="#" class="btn">Get Started</a>
         </div>
 
-        <!-- Enterprise -->
+        <!-- RAGE (Enterprise) -->
         <div class="pricing-card enterprise">
           <div class="plan-image enterprise-img"></div>
           <h2>RAGE</h2>
@@ -122,19 +180,52 @@
             You won't uncover a superior alternative for a refined, high-impact broadcast.
           </p>
           <ul class="plan-features">
-            <li>Setup</li>
-            <li>Live Broadcasting</li>
-            <li>Observing setup + observer</li>
-            <li>Instant Replays</li>
-            <li>Server admin</li>
-            <li>Overlays</li>
-            <li>SMM+</li>
-            <li>Talent search</li>
-            <li>Design kit</li>
-            <li>Overlays</li>
-            <li>Tournament documentation</li>
-            <li>video development</li>
-            <li>Tournament documentation</li>
+            <li>
+              <span class="icon-check">✓</span> Setup 
+              <span class="icon-plus"></span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span> Live Broadcasting 
+              <span class="icon-plus"></span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span> Observing setup + observer 
+              <span class="icon-plus"></span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span> Instant Replays 
+              <span class="icon-plus"></span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span> Server admin 
+              <span class="icon-plus"></span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span> Overlays 
+              <span class="icon-plus"></span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span> SMM+ 
+              <span class="icon-plus">+</span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span> Talent search 
+              <span class="icon-plus">+</span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span> Design kit 
+              <span class="icon-plus">+</span>
+            </li>
+            <!-- Если какой-то пункт повторяется или его не нужно показывать дважды,
+                         отредактируйте список по необходимости -->
+            <li>
+              <span class="icon-check">✓</span> Tournament documentation 
+              <span class="icon-plus">+</span>
+            </li>
+            <li>
+              <span class="icon-check">✓</span> Video development 
+              <span class="icon-plus">+</span>
+            </li>
           </ul>
           <a href="#" class="btn">Get Started</a>
         </div>
@@ -317,6 +408,48 @@
       </div>
     </section>
 
+    <footer class="footer">
+      <!-- Фоновый прямоугольник -->
+      <div class="footer-rectangle"></div>
+    
+      <!-- Заголовки групп ссылок -->
+      <div class="footer-pages-header">PAGES</div>
+      <div class="footer-social-header">SOCIAL</div>
+      <div class="footer-contact-header">CONTACT</div>
+    
+      <!-- Ссылки группы PAGES -->
+      <a href="tools.html" class="footer-tools">tools</a>
+      <a href="services.html" class="footer-services">services</a>
+      <a href="about.html" class="footer-about">about</a>
+      <a href="events.html" class="footer-events">events</a>
+    
+      <!-- Ссылки группы SOCIAL -->
+      <a href="twitter.html" class="footer-twitter">x (twitter)</a>
+      <a href="instagram.html" class="footer-instagram">instagram</a>
+      <a href="threads.html" class="footer-threads">threads</a>
+      <a href="tiktok.html" class="footer-tiktok">tik-tok</a>
+    
+      <!-- Контактные данные -->
+      <div class="footer-email">rr.studio@gmail.com</div>
+      <div class="footer-phone">+38 073 566 30 50</div>
+    
+      <!-- Описание -->
+      <div class="footer-description">
+        Rage Raptors - predators in the world of live broadcasting. Energy that cannot be tamed.<br><br>
+         We merge creativity and technology power to craft live moments that captivate and inspire.
+      </div>
+    
+      <!-- Логотип -->
+      <div class="footer-logo"></div>
+    
+      <!-- Копирайт -->
+      <div class="footer-copyright">
+        © rage raptors, 2022.
+      </div>
+    </footer>
+    
+
+    
   </div><!-- /.page-content -->
 
 </body>
