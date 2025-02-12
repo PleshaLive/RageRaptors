@@ -7,10 +7,7 @@
   <!-- Подключаем внешний CSS-файл -->
   <link rel="stylesheet" href="events.css">
   <link rel="stylesheet" href="footer.css">
-  <!-- Скрипт для транзишна и прочих переходов -->
-  <script defer src="script.js"></script>
 </head>
-
 <body>
   <!-- Альфа-транзишн (опционально) -->
   <div id="transitionOverlay">
@@ -70,7 +67,7 @@
     <img src="images/up-arrow.png" alt="Вверх">
   </button>
 
-  <!-- Аудио элемент для звукового эффекта при наведении -->
+  <!-- Аудио элемент для звукового эффекта при наведении на турниры (будет использоваться в createTournamentBlock) -->
   <audio id="hoverSound" src="assets/hover-sound.wav"></audio>
 
   <!-- JSON-данные турниров -->
@@ -814,65 +811,176 @@
     ]
       </script>
 
-  <!-- Скрипт для генерации блоков турниров с звуковым эффектом при наведении -->
+  <!-- Встроенный скрипт -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const container = document.querySelector('.tournaments-container');
-      const dataScript = document.getElementById('tournaments-json');
-      const tournaments = JSON.parse(dataScript.textContent);
-      renderTournaments(container, tournaments);
-    });
-
-    function createTournamentBlock(t) {
-      const block = document.createElement('div');
-      block.className = 'tournament-block';
-      block.innerHTML = `
-        <div class="date1">${t.date}</div>
-        <div class="cs-go">${t.game}</div>
-        <div class="championship">${t.championship}</div>
-        <div class="tournament-link">
-          <a href="${t.link}" target="_blank">LINK</a>
-        </div>
-      `;
-      // При наведении воспроизводим звуковой эффект
-      block.addEventListener('mouseenter', () => {
-    const hoverSound = new Audio('assets/hover-sound.wav');
-    hoverSound.volume = 0.27;  // уменьшение громкости примерно на 51%
-    hoverSound.play().catch(err => console.error(err));
-  });
-  return block;
-}
-
-    function renderTournaments(container, arr) {
-      container.innerHTML = '';
-      arr.forEach(t => {
-        const block = createTournamentBlock(t);
-        container.appendChild(block);
+    // Функция для разблокировки звука (снимаем muted у всех audio и возобновляем AudioContext, если он был создан)
+    function unlockAudio() {
+      if (!window.audioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        window.audioCtx = new AudioContext();
+      }
+      if (window.audioCtx.state === 'suspended') {
+        window.audioCtx.resume().catch(err => console.error(err));
+      }
+      document.querySelectorAll('audio').forEach(audio => {
+        audio.muted = false;
       });
     }
-  </script>
 
-  <!-- Скрипт для показа/скрытия кнопки прокрутки вверх -->
-  <script>
-    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    document.addEventListener("DOMContentLoaded", () => {
+      // --- Код для transition-overlay и подмены страницы ---
+      const transitionOverlay = document.getElementById("transitionOverlay");
+      const transitionVideo = document.getElementById("transitionVideo");
+      const iframeContainer = document.getElementById("iframeContainer");
+      const pageContent = document.querySelector(".page-content");
 
-    window.addEventListener("scroll", function() {
-      if (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) {
-        scrollToTopBtn.style.display = "block";
-      } else {
-        scrollToTopBtn.style.display = "none";
+      if (transitionOverlay && transitionVideo && iframeContainer && pageContent) {
+        const CUT_POINT = 0.6; // время в секундах, когда содержимое меняется
+        let pendingUrl = null;
+        let cutDone = false;
+
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach(link => {
+          link.addEventListener("click", event => {
+            event.preventDefault();
+            pendingUrl = link.getAttribute("href");
+            cutDone = false;
+
+            // Разблокируем звук при первом клике
+            unlockAudio();
+            // Снимаем muted с transitionVideo, чтобы звук транзишна был слышен
+            transitionVideo.muted = false;
+            // Показываем overlay и запускаем видео
+            transitionOverlay.style.display = "block";
+            transitionVideo.currentTime = 0;
+            transitionVideo.play().catch(err => console.error(err));
+          });
+        });
+
+        transitionVideo.addEventListener("timeupdate", () => {
+          if (!cutDone && transitionVideo.currentTime >= CUT_POINT) {
+            cutDone = true;
+            pageContent.style.display = "none";
+            iframeContainer.style.display = "block";
+            iframeContainer.innerHTML = `
+              <iframe src="${pendingUrl}" 
+                      style="border: none; width: 100%; height: 100%; background-color: #1a1a1a;">
+              </iframe>
+            `;
+          }
+        });
+
+        transitionVideo.addEventListener("ended", () => {
+          if (pendingUrl) {
+            window.location.href = pendingUrl;
+          }
+        });
+      }
+
+      // --- Обработчик для звука при наведении на product-button ---
+      document.querySelectorAll('.product-button').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          const productHoverSound = new Audio('assets/product-hover.wav');
+          // Установите громкость по необходимости (например, 1 = максимум)
+          productHoverSound.volume = 0.4;
+          productHoverSound.play().catch(err => console.error(err));
+        });
+      });
+
+          // --- Обработчик для звука при наведении на product-button ---
+          document.querySelectorAll('.services-button').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          const productHoverSound = new Audio('assets/product-hover2.wav');
+          // Установите громкость по необходимости (например, 1 = максимум)
+          productHoverSound.volume = 0.4;
+          productHoverSound.play().catch(err => console.error(err));
+        });
+      });
+
+          // --- Обработчик для звука при наведении на product-button ---
+          document.querySelectorAll('.about-button').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          const productHoverSound = new Audio('assets/product-hover3.wav');
+          // Установите громкость по необходимости (например, 1 = максимум)
+          productHoverSound.volume = 0.4;
+          productHoverSound.play().catch(err => console.error(err));
+        });
+      });
+
+                // --- Обработчик для звука при наведении на product-button ---
+                document.querySelectorAll('.events-button').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          const productHoverSound = new Audio('assets/product-hover4.wav');
+          // Установите громкость по необходимости (например, 1 = максимум)
+          productHoverSound.volume = 0.4;
+          productHoverSound.play().catch(err => console.error(err));
+        });
+      });
+
+      // --- Генерация блоков турниров с эффектом при наведении ---
+      const container = document.querySelector('.tournaments-container');
+      const dataScript = document.getElementById('tournaments-json');
+      if (dataScript && container) {
+        const tournaments = JSON.parse(dataScript.textContent);
+        renderTournaments(container, tournaments);
+      }
+
+      function createTournamentBlock(t) {
+        const block = document.createElement('div');
+        block.className = 'tournament-block';
+        block.innerHTML = `
+          <div class="date1">${t.date}</div>
+          <div class="cs-go">${t.game}</div>
+          <div class="championship">${t.championship}</div>
+          <div class="tournament-link">
+            <a href="${t.link}" target="_blank">LINK</a>
+          </div>
+        `;
+        // При наведении воспроизводим звуковой эффект с уменьшенной громкостью
+        block.addEventListener('mouseenter', () => {
+          const hoverSound = new Audio('assets/hover-sound.wav');
+          hoverSound.volume = 0.27;
+          hoverSound.play().catch(err => console.error(err));
+        });
+        return block;
+      }
+
+      function renderTournaments(container, arr) {
+        container.innerHTML = '';
+        arr.forEach(t => {
+          const block = createTournamentBlock(t);
+          container.appendChild(block);
+        });
+      }
+
+      // --- Код для кнопки "Прокрутить вверх" ---
+      const scrollBtn = document.getElementById("scrollToTopBtn");
+      if (scrollBtn) {
+        window.addEventListener("scroll", () => {
+          if (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) {
+            scrollBtn.style.display = "block";
+          } else {
+            scrollBtn.style.display = "none";
+          }
+        });
+        scrollBtn.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        });
       }
     });
 
-    scrollToTopBtn.addEventListener("click", function() {
+    function scrollToTop() {
       window.scrollTo({
         top: 0,
-        behavior: "smooth"
+        behavior: 'smooth'
       });
-    });
+    }
   </script>
-
-  <!-- Дополнительный скрипт (если требуется) -->
+  
+  <!-- Дополнительный внешний скрипт, если требуется -->
   <script src="script.js"></script>
   
   <footer class="footer">
@@ -915,6 +1023,5 @@
       © rage raptors, 2022.
     </div>
   </footer>
-
 </body>
 </html>

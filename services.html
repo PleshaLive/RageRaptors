@@ -52,6 +52,48 @@
     <!-- Логотип -->
     <div class="logo"></div>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Обработчик для .product-button
+        document.querySelectorAll('.product-button').forEach(function(el) {
+          el.addEventListener('mouseenter', function() {
+            const productHoverSound = new Audio('assets/product-hover.wav');
+            productHoverSound.volume = 0.4;
+            productHoverSound.play().catch(err => console.error(err));
+          });
+        });
+        
+        // Обработчик для .services-button
+        document.querySelectorAll('.services-button').forEach(function(el) {
+          el.addEventListener('mouseenter', function() {
+            const productHoverSound = new Audio('assets/product-hover2.wav');
+            productHoverSound.volume = 0.4;
+            productHoverSound.play().catch(err => console.error(err));
+          });
+        });
+        
+        // Обработчик для .about-button
+        document.querySelectorAll('.about-button').forEach(function(el) {
+          el.addEventListener('mouseenter', function() {
+            const productHoverSound = new Audio('assets/product-hover3.wav');
+            productHoverSound.volume = 0.4;
+            productHoverSound.play().catch(err => console.error(err));
+          });
+        });
+        
+        // Обработчик для .events-button
+        document.querySelectorAll('.events-button').forEach(function(el) {
+          el.addEventListener('mouseenter', function() {
+            const productHoverSound = new Audio('assets/product-hover4.wav');
+            productHoverSound.volume = 0.4;
+            productHoverSound.play().catch(err => console.error(err));
+          });
+        });
+      });
+    </script>
+    
+
+    
     <!-- Блок навигации из 4 кнопок -->
     <div class="nav-buttons">
       <a href="tools.html" class="nav-link">
